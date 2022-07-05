@@ -1,9 +1,31 @@
 mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
+		+e.bg-text
+			img(src="img/svg/logo-bg.svg", alt="")
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
-			.row
+			+e.wrap
+				+e.map-block
+					+e.IMG.map-pic(src="img/map.jpg", alt="")
+					+e.map-link(href="#")
+						+icon('map')
+						span Посмотреть на карте
+				+e.text-block
+					h2 Наши координаты
+					+e.text-item
+						p <strong>Адрес</strong>
+						p 111141, Москва, ул. Кусковская, д. 20А, ВАО, Перово
+					+e.text-item
+						p <strong>Телефон для связи</strong>
+						+e.tel-wrap
+							a(href="tel:+79099969698") +7 909 996-96-98
+							+e.soc-wrap
+								img(src="img/svg/telegram.svg", alt="")
+								img(src="img/svg/whatsapp.svg", alt="")
+					+e.text-item
+						p <strong>Отдел продаж</strong>
+						a(href="mailto:sales@sutoteile-import.ru") sales@sutoteile-import.ru
+					+e.text-item
+						p <strong>Отдел закупок</strong>
+						a(href="mailto:buying@sutoteile-import.ru") buying@sutoteile-import.ru
 	// end sContact

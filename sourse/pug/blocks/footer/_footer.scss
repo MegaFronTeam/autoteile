@@ -1,6 +1,15 @@
 .footer {
 	margin-top: auto;
-
+	--db: none;
+	--dbsoc: flex;
+	&.is-down {
+		--db: block;
+		--dbsoc: none;
+	}
+	@include media-breakpoint-down(lg) {
+		padding-bottom: 40px;
+		padding-top: 10px;
+	}
 	@include media-breakpoint-up(lg) {
 		position: fixed;
 		z-index: 100;
@@ -10,16 +19,16 @@
 		height: rem(100);
 		padding-bottom: 40px;
 	}
-	&__arrow{
+	&__arrow {
 		width: rem(60);
 		height: rem(60);
-		@include media-breakpoint-down(lg){
+		@include media-breakpoint-down(lg) {
 			display: none;
 		}
 	}
-	&__wrap{
+	&__wrap {
 		display: flex;
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 			flex-direction: row;
 			justify-content: space-between;
 			align-items: flex-end;
@@ -27,5 +36,50 @@
 		flex-direction: column;
 		align-items: center;
 	}
-	//
+	&__arrow-wrap {
+		@include media-breakpoint-up(lg) {
+			width: rem(210);
+		}
+		@include media-breakpoint-down(lg) {
+			display: none;
+		}
+	}
+	.soc {
+		@include media-breakpoint-up(lg) {
+			display: var(--dbsoc);
+		}
+		@include media-breakpoint-down(lg) {
+			display: none;
+		}
+	}
+	&__development {
+		@include media-breakpoint-up(lg) {
+			display: var(--db);
+			text-align: right;
+			width: rem(210);
+		}
+		text-align: center;
+		font-size: rem(14);
+	}
+	&__copyright {
+		@include media-breakpoint-up(lg) {
+			display: var(--db);
+			margin-bottom: 0;
+		}
+		margin-bottom: 20px;
+		text-align: center;
+	}
+	&__cop-text {
+		font-size: rem(14);
+		line-height: calc(20 / 14);
+		@include media-breakpoint-down(lg) {
+			max-width: rem(200);
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	&__policy {
+		font-size: rem(14);
+		color: #8f8f8f;
+	}
 }

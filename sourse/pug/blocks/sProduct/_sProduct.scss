@@ -1,0 +1,129 @@
+// start .sProduct
+.sProduct {
+	.container {
+		display: flex;
+		flex-direction: column;
+		@include media-breakpoint-up(lg) {
+			justify-content: center;
+		}
+	}
+	&__wrap {
+		display: flex;
+		@include media-breakpoint-up(lg) {
+			flex-direction: row;
+			margin: 0 auto;
+			justify-content: space-between;
+			padding-left: rem(60);
+			padding-right: rem(60);
+		}
+		flex-direction: column;
+		align-items: center;
+		@include media-breakpoint-up(xxl) {
+			max-width: rem(1300);
+			padding-left: 0;
+			padding-right: 0;
+			width: 100%;
+			padding-bottom: rem(18);
+		}
+	}
+	&__product {
+		@include media-breakpoint-up(lg) {
+			width: rem(640);
+			// height: rem(500);
+			max-width: 46%;
+			margin-top: 0;
+		}
+		@include media-breakpoint-up(xl){
+			max-width: 49%;
+		}
+		margin-top: rem(51.41);
+		@include block(640, 518);
+		width: 100%;
+		position: relative;
+		@include media-breakpoint-down(lg) {
+			order: 1;
+		}
+	}
+	&__product-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	&__text-block {
+		@include media-breakpoint-up(lg) {
+			
+			max-width: 50%;
+			// height: rem(500);
+		}
+		@include media-breakpoint-up(xl){
+			max-width: 42%;
+			width: rem(530);
+		}
+		@include media-breakpoint-down(lg) {
+			order: 0;
+		}
+	}
+	&__product-item {
+		@include block(100, 100);
+		position: absolute !important;
+		background-color: rgba(#f6f6f6, 0.95);
+		@include media-breakpoint-up(lg) {
+			border-radius: rem(20);
+		}
+		width: 15.625%;
+		border-radius: 10px;
+		z-index: 2;
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 60%;
+		}
+		&--pos1 {
+			top: 0%;
+			right: 32.8125%;
+		}
+		&--pos2 {
+			top: 12.16%;
+			right: 0;
+		}
+		&--pos3 {
+			bottom: 17.18%;
+			right: 6.40625%;
+		}
+		&--pos4 {
+			bottom: 0;
+			left: 32.8125%;
+		}
+		&--pos5 {
+			bottom: 21.24%;
+			left: 0;
+		}
+		&--pos6 {
+			top: 11.39%;
+			left: 0;
+		}
+	}
+	h2{
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(30);
+			text-align: left;
+		}
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	p{
+		@include media-breakpoint-up(lg){
+			text-align: left;
+		}
+		text-align: center;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	@include media-breakpoint-up(lg) {
+	}
+} // end.sProduct

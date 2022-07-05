@@ -2,5 +2,10 @@ mixin footer()
 	+b.FOOTER.footer
 		.container
 			+e.wrap
-				+e.arrow
+				+e.arrow-wrap
+					+e.arrow
+				+e.copyright
+					+e.cop-text © 2022 Autoteile Import. Все права защищены.
+					+e.policy(href="#") Политика конфиденциальности
+				+e.development Разработка сайта - <strong>Artsman</strong>
 				+soc

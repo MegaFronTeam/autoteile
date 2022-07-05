@@ -1,0 +1,22 @@
+mixin sAdvantages(data)
+	// start sAdvantages
+	+b.SECTION.sAdvantages.section.gray-bg#sAdvantages&attributes(attributes)
+		.container
+			+e.wrap
+				h2 Наши преимущества
+				.row
+					mixin item(icon,text)
+						.col-lg-3.col-6
+							+e.item
+								+e.pic
+									+icon(`advantages-${icon}`)
+								+e.text!=text
+					+item(1,`Широчайший ассортимент мировых брендов в&nbsp;различных ценовых категориях`)
+					+item(2,`Круглосуточный прием автоматической системой электронных заявок`)
+					+item(3,`Индивидуальный подход к&nbsp;каждому клиенту`)
+					+item(4,`Разнообразные формы приема заявок`)
+					+item(5,`Склад при офисе`)
+					+item(6,`Высококвалифицированный персонал`)
+					+item(7,`Удобное время приёма заявок`)
+					+item(8,`Всесторонняя техническая поддержка`)
+	// end sAdvantages
