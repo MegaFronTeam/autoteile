@@ -1,5 +1,5 @@
 "use strict";
-const JSCCommon = { 
+const JSCCommon = {
 	modalCall() {
 		const link = '[data-fancybox="modal"], .link-modal-js';
 
@@ -23,8 +23,8 @@ const JSCCommon = {
 				PREV: "Назад",
 			},
 		});
-		document.querySelectorAll(".modal-close-js").forEach(el=>{
-			el.addEventListener("click", ()=>{
+		document.querySelectorAll(".modal-close-js").forEach(el => {
+			el.addEventListener("click", () => {
 				Fancybox.close();
 			})
 		})
@@ -79,7 +79,7 @@ const JSCCommon = {
 		}
 
 	},
-	mobileMenu() { 
+	mobileMenu() {
 		const menu = document.querySelector(".menu-mobile--js");
 		if (!menu) return;
 		this.toggleMenu();
@@ -153,7 +153,7 @@ const JSCCommon = {
 		// mask for input
 		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
 		InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
-		Inputmask({"mask":"+9(999)999-99-99", showMaskOnHover: false}).mask(InputTel);
+		Inputmask({ "mask": "+9(999)999-99-99", showMaskOnHover: false }).mask(InputTel);
 	},
 	// /inputMask
 	ifie() {
@@ -297,7 +297,7 @@ function eventHandler() {
 	JSCCommon.makeDDGroup();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
-	
+
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
@@ -305,8 +305,55 @@ function eventHandler() {
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
+	var wow = new WOW({
+		mobile: false,
+		animateClass: 'animate__animated',
+		live: true
+	});
+	$('#fullpage').fullpage({
+		scrollingSpeed: 800,
+		loopHorizontal: true,
+		responsiveWidth: 1200,
+		// responsiveHeight: 600,
+		// responsiveHeight: 600,
+		// responsiveHeight: 1200,
+		animateAnchor: true,
+		navigation: true,
+		navigationPosition: 'right',
+		recordHistory: false,
+		css3: true,
+		scrollBar: true,
+		// verticalCentered: false,
+		// fixedElements: '.top-nav',
+		anchors: ['header', 'sBase', 'sProf', 'sCorp', 'sWhy', 'sStart', 'sTeam', "sDemo", 'sRew', 'sGift', 'sLogo', 'sGift2', 'sFaq', 'sApplication'],
+		menu: '.menu',
+		// scrollBar: true,
+		parallaxOptions: { type: 'reveal', percentage: 62, property: 'translate' },
+		afterLoad: function (origin, destination, direction) {
+			var loadedSection = destination.item;
+			// console.log(this);
+			if (loadedSection.classList.contains('section--dark')) {
+				document.querySelector('body').classList.add('body-dark')
+			} else {
+				document.querySelector('body').classList.remove('body-dark')
+
+			}
+
+		},
+		// continuousVertical: true,
+		// autoScrolling: true,
+		// scrollOverflow: true,
+		// scrollOverflowReset: true,
+		// scrollOverflowReset: true,
+		afterRender: function () {
+			wow.init();
+			// var rellax = new Rellax('.rellax', {});
+			// wow.init();
 
 
+
+		},
+	});
 	function setFixedNav() {
 		let topNav = document.querySelector('.top-nav  ');
 		if (!topNav) return;
