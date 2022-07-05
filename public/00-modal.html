@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 	<head>
 		<meta charset="utf-8">
 		<title>Модальные окна</title>
@@ -9,18 +9,22 @@
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link href="libs/aos/aos.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
+		<link href="libs/fullpage.js/fullpage.min.css" rel="stylesheet"/>
 	</head>
 	<body>
 		<div class="main-wrapper">
-			<div class="section container">
-				<h1>Страница для  демонстрации модальных окон</h1>
-				<div class="row">
-										<div class="col-auto mb-2"><a class="btn btn-primary" href="#" data-src="modal-call" data-fancybox="modal">modal-call</a></div>
+			<div id="fullpage">
+				<div class="section container">
+					<h1>Страница для  демонстрации модальных окон</h1>
+					<div class="row">
+												<div class="col-auto mb-2"><a class="btn btn-primary" href="#" data-src="modal-call" data-fancybox="modal">modal-call</a></div>
+					</div>
 				</div>
 			</div>
 		</div>
-		<!--  start modals--><a class="link-modal-js" href="modal-call">modal-call </a>
+		<!--  start modals-->
 		<div id="modal-call" style="display: none">
 			<div class="modal-win">
 				<div class="form-wrap">
@@ -48,6 +52,8 @@
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/aos/aos.js"> </script>
+		<script src="libs/fullpage.js/fullpage.min.js"></script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
 		<script src="js/common.js"></script>
 	</body>

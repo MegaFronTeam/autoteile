@@ -2,9 +2,17 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
-						
+			+e.wrap
+				+e.car
+					+e.IMG.car-bg(src="img/car-bg.png", alt="")
+					mixin item(num)
+						+e.car-item(class=`--pos${num}`)
+							img(src=`img/car-item-${num}.png`, alt="")
+					- for(let x = 1;x<7;x++)
+						+item(x)
+				h1 Решения по поставке автозапчастей для легковых автомобилей по всему миру
+				+e.caption.d-lg-none AUTOTEILE IMPORT&nbsp;&mdash; это инновационная компания, обладающая широкими возможностями международной организации
+				a.top-nav__order-call.d-lg-none(href="#") Заказать звонок
+			+e.caption.d-none.d-lg-block AUTOTEILE IMPORT&nbsp;&mdash; это инновационная компания, обладающая широкими возможностями международной организации
+			
 	// end headerBlock

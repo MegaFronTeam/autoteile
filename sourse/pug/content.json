@@ -1,34 +1,36 @@
 {
-	"nav":[
-		{ "name":"Наши работы", "url":"#"},
-		{	"name":"Цены", "url":"#"},
-		{"name":"Калькулятор", "url":"#"},
-		{"name":"Акции", "url":"#"} ,
-		{
-			"name":"Заказать", 
-			"url":"#"
-			}
-	],
-	"social":[
-		"fb","instagram","telegram"
-	],
-	"index":{
-		"head": {
-			"title": "тест dffsdf dfsdтест 2222"
-		}
+	"ru": {
+		"lang": "ru",
+		"nav": [
+			{"name": "Начало"},
+			{"name": "Кто мы"},
+			{"name": "Наша продукция"},
+			{"name": "Наши преимущества"},
+			{"name": "Наши координаты"}
+		],
+		"orderCall":"Заказать звонок"
 	},
-	"items": [
-			{
-			"title": "заловок",
-			"text": "текст"
-		},
-			{
-			"title": "заловок 22",
-			"text": "текст"
-		},
-			{
-			"title": "заловок 33",
-			"text": "текст"
-			}
-		]
-	}
+	"eng": {
+		"lang": "eng",
+		"nav": [
+			{"name": "Start"},
+			{"name": "Who we are"},
+			{"name": "Our production"},
+			{"name": "Our advantages"},
+			{"name": "Our location"}
+		],
+		"orderCall":"Application form"
+	},
+	"navLinks":[
+		{"url": "#"},
+		{"url": "#"},
+		{"url": "#"},
+		{"url": "#"},
+		{"url": "#"}
+	],
+	"social": [
+		"fb",
+		"instagram",
+		"telegram"
+	]
+}

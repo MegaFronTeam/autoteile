@@ -1,4 +1,4 @@
-$rfs-rem-value: 16 !default;
+$rfs-rem-value: 18 !default;
 $em-base: $rfs-rem-value * 1px;
 $small: rem(14);
 $url: '../img/';
@@ -426,7 +426,7 @@ $position-values: (
 // Settings for the `<body>` element.
 
 $body-bg:                   $white !default;
-$body-color:                $gray-900 !default;
+$body-color:               #1e1e1e;
 $body-text-align:           null !default;
 
 // Links
@@ -461,7 +461,7 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1400px
+  xxl: 1600px
 ) !default;
 // scss-docs-end grid-breakpoints
 
@@ -477,9 +477,7 @@ $grid-breakpoints: (
 $container-max-widths: (
   sm: 540px,
   md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 1320px
+  lg: 100%,
 ) !default;
 // scss-docs-end container-max-widths
 

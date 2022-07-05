@@ -1,13 +1,13 @@
 
-mixin mnu()
+//- mixin mnu(menu)
+//- 	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+//- - let menu = ru.nav
+//- 		each link in menu
+//- 			li.menu-item(itemprop="item" ): a(href= link.url itemprop="url")= link.name
+mixin mnu(menu)
 	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
-		each link in nav
-			li.menu-item(itemprop="item" ): a(href= link.url itemprop="url")= link.name
-			if link.subnav
-				li.menu-item.menu-item-has-children
-					a(href="#" itemprop="url") О нас
-					ul.sub-menu
-						each sublink in link.subnav
-							li.menu-item(itemprop="item" ): a(href= sublink.url itemprop="url")= sublink.name
+		each link,key in menu
+			li.menu-item(itemprop="item" ): a(href= navLinks[key].url itemprop="url")= link.name
+
 
 //- menu
