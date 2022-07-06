@@ -7,7 +7,7 @@ mixin sContact(data)
 			+e.wrap
 				+e.map-block(data-aos="fade-up" data-aos-duration="500" data-aos-delay="2700")
 					+e.IMG.map-pic(src="img/map.jpg", alt="")
-					+e.map-link(href="#" data-src="#modal-map" data-fancybox="modal")
+					+e.map-link.modal-open-link(href="#" data-src="#modal-map" data-fancybox="modal")
 						+icon('map')
 						span=data.map
 				+e.text-block

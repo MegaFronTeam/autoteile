@@ -1,4 +1,6 @@
 "use strict";
+const $ = jQuery;
+
 const JSCCommon = {
 	modalCall() {
 		const link = '[data-fancybox="modal"], .link-modal-js';
@@ -21,6 +23,16 @@ const JSCCommon = {
 				Escape: "Закрыть",
 				NEXT: "Вперед",
 				PREV: "Назад",
+			},
+			on: {
+				// done: (fancybox, slide) => {
+				// 	fullpage_api.setAllowScrolling(false);
+				// 	// console.log(1);
+				// },
+				destroy:(fancybox, slide) => {
+					fullpage_api.setAllowScrolling(true);
+					console.log(2);
+				},
 			},
 		});
 		document.querySelectorAll(".modal-close-js").forEach(el => {
@@ -282,7 +294,7 @@ const JSCCommon = {
 		}
 	},
 };
-const $ = jQuery;
+
 
 function eventHandler() {
 	// JSCCommon.ifie();
@@ -308,6 +320,7 @@ function eventHandler() {
 	var myFullpage = new fullpage('#fullpage', {
 		scrollingSpeed: 1000,
 		// loopHorizontal: true,
+		// scrollOverflowReset:true,
 		responsiveWidth: 992,
 		// responsiveHeight: 600,
 		// responsiveHeight: 600,
@@ -318,6 +331,7 @@ function eventHandler() {
 		// recordHistory: false,
 		css3: true,
 		scrollBar: true,
+		normalScrollElements: ".fancybox__content",
 		// verticalCentered: false,
 		// fixedElements: '.top-nav',
 		// lockAnchors: false,
@@ -330,83 +344,89 @@ function eventHandler() {
 			var loadedSection = destination.item;
 			// console.log(loadedSection);
 			let fArrow = document.querySelector('.footer__arrow');
-			if(loadedSection.classList.contains('headerBlock')){
+			if (loadedSection.classList.contains('headerBlock')) {
 				fArrow.classList.add('p1');
-				if(fArrow.classList.contains('p2')){
+				if (fArrow.classList.contains('p2')) {
 					fArrow.classList.remove('p2');
 				}
-				if(fArrow.classList.contains('p3')){
+				if (fArrow.classList.contains('p3')) {
 					fArrow.classList.remove('p3');
 				}
-				if(fArrow.classList.contains('p4')){
+				if (fArrow.classList.contains('p4')) {
 					fArrow.classList.remove('p4');
 				}
-				if(fArrow.classList.contains('footer__arrow--is-down')){
+				if (fArrow.classList.contains('footer__arrow--is-down')) {
 					fArrow.classList.remove('footer__arrow--is-down');
 				}
 			}
-			if(loadedSection.classList.contains('sAbout')){
+			if (loadedSection.classList.contains('sAbout')) {
 				fArrow.classList.add('p2');
-				if(fArrow.classList.contains('p1')){
+				if (fArrow.classList.contains('p1')) {
 					fArrow.classList.remove('p1');
 				}
-				if(fArrow.classList.contains('p3')){
+				if (fArrow.classList.contains('p3')) {
 					fArrow.classList.remove('p3');
 				}
-				if(fArrow.classList.contains('p4')){
+				if (fArrow.classList.contains('p4')) {
 					fArrow.classList.remove('p4');
 				}
-				if(fArrow.classList.contains('footer__arrow--is-down')){
+				if (fArrow.classList.contains('footer__arrow--is-down')) {
 					fArrow.classList.remove('footer__arrow--is-down');
 				}
 			}
-			if(loadedSection.classList.contains('sProduct')){
+			if (loadedSection.classList.contains('sProduct')) {
 				fArrow.classList.add('p3');
-				if(fArrow.classList.contains('p1')){
+				if (fArrow.classList.contains('p1')) {
 					fArrow.classList.remove('p1');
 				}
-				if(fArrow.classList.contains('p2')){
+				if (fArrow.classList.contains('p2')) {
 					fArrow.classList.remove('p2');
 				}
-				if(fArrow.classList.contains('p4')){
+				if (fArrow.classList.contains('p4')) {
 					fArrow.classList.remove('p4');
 				}
-				if(fArrow.classList.contains('footer__arrow--is-down')){
+				if (fArrow.classList.contains('footer__arrow--is-down')) {
 					fArrow.classList.remove('footer__arrow--is-down');
 				}
 			}
-			if(loadedSection.classList.contains('sAdvantages')){
+			if (loadedSection.classList.contains('sAdvantages')) {
 				fArrow.classList.add('p4');
-				if(fArrow.classList.contains('p1')){
+				if (fArrow.classList.contains('p1')) {
 					fArrow.classList.remove('p1');
 				}
-				if(fArrow.classList.contains('p2')){
+				if (fArrow.classList.contains('p2')) {
 					fArrow.classList.remove('p2');
 				}
-				if(fArrow.classList.contains('p3')){
+				if (fArrow.classList.contains('p3')) {
 					fArrow.classList.remove('p3');
 				}
-				if(fArrow.classList.contains('footer__arrow--is-down')){
+				if (fArrow.classList.contains('footer__arrow--is-down')) {
 					fArrow.classList.remove('footer__arrow--is-down');
 				}
 			}
 			if (loadedSection.classList.contains('sContact')) {
 				document.querySelector('footer').classList.add('is-down');
+				setTimeout(() => document.querySelector('.footer__copyright').classList.add('visible'), 400);
+				setTimeout(() => document.querySelector('.footer__development').classList.add('visible'), 400);
+				document.querySelector('.footer .soc').classList.remove('visible');
 				fArrow.classList.add('footer__arrow--is-down');
-				if(fArrow.classList.contains('p1')){
+				if (fArrow.classList.contains('p1')) {
 					fArrow.classList.remove('p1');
 				}
-				if(fArrow.classList.contains('p2')){
+				if (fArrow.classList.contains('p2')) {
 					fArrow.classList.remove('p2');
 				}
-				if(fArrow.classList.contains('p3')){
+				if (fArrow.classList.contains('p3')) {
 					fArrow.classList.remove('p3');
 				}
-				if(fArrow.classList.contains('p4')){
+				if (fArrow.classList.contains('p4')) {
 					fArrow.classList.remove('p4');
 				}
 			} else {
 				document.querySelector('footer').classList.remove('is-down');
+				document.querySelector('.footer__copyright').classList.remove('visible');
+				document.querySelector('.footer__development').classList.remove('visible');
+				setTimeout(() => document.querySelector('.footer .soc').classList.add('visible'), 400);
 				fArrow.classList.remove('footer__arrow--is-down');
 			}
 
@@ -425,13 +445,15 @@ function eventHandler() {
 			// wow.init();
 			// var rellax = new Rellax('.rellax', {});
 			// wow.init();
+			AOS.init({
+				disable: 'mobile',
+			});
 
 
-			
+
 		},
 	});
-	// $.fn.fullpage.setAllowScrolling(false);
-
+	// console.log(myFullpage);
 
 	$(document).on('click', '.footer__arrow', function () {
 		fullpage_api.moveSectionDown();
@@ -439,7 +461,29 @@ function eventHandler() {
 	$(document).on('click', '.footer__arrow--is-down', function () {
 		fullpage_api.moveTo('header');
 	});
-// }
+	if (document.querySelector('.menu-mobile--js')) {
+		let links = document.querySelectorAll('.menu-mobile a');
+		for (let i = 0; i < links.length; i++) {
+			links[i].addEventListener('click', () => { 
+				document.querySelector('.menu-mobile--js').classList.remove('active'); 
+				document.querySelector('.toggle-menu-mobile--js').classList.remove('on'); 
+				
+			});
+		}
+	}
+	if(document.querySelector('.modal-open-link')){
+		let modalOpen = document.querySelectorAll('.modal-open-link');
+		for (let i = 0; i < modalOpen.length; i++) {
+			modalOpen[i].addEventListener('click', () => { 
+				fullpage_api.setAllowScrolling(false);
+			});
+		}
+	}
+	if(document.querySelector('.is-close')){
+		console.log(document.querySelector('.is-close'));
+	}
+	
+	// }
 	// function setFixedNav() {
 	// 	let topNav = document.querySelector('.top-nav  ');
 	// 	if (!topNav) return;
@@ -462,7 +506,7 @@ function eventHandler() {
 
 	whenResize();
 
-	AOS.init();
+	
 	let defaultSl = {
 		spaceBetween: 0,
 		lazy: {
@@ -485,7 +529,7 @@ function eventHandler() {
 		},
 	}
 
-	
+
 	// modal window
 
 };

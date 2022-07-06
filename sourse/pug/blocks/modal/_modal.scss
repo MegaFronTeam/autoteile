@@ -7,6 +7,14 @@
 	max-width: 100%;
 	width: 100%;
 	height: 100%;
+	@include media-breakpoint-down(sm){
+		height: auto;
+	}
+}
+.modal-win,.modal-map{
+	@include media-breakpoint-down(sm){
+		min-height: 100vh;
+	}
 }
 .fancybox__slide {
 	padding: 0;
@@ -40,6 +48,9 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	@include media-breakpoint-down(lg){
+		padding-top: 50px;
+	}
 	.modal-content {
 		// max-width: 485px;
 		// padding-right: 40px 15px;

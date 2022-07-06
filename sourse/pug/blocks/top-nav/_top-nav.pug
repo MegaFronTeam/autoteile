@@ -35,13 +35,13 @@ mixin top-nav(orderCall)
 							+e.menu-footer
 								+e.tel(href="tel:+79099969698") +7 909 996-96-98
 								+e.menu-footer-btn-wrap
-									+e.order-call(href="#" data-src='#modal-call' data-fancybox="modal")=orderCall
+									+e.order-call.modal-open-link(href="#" data-src='#modal-call' data-fancybox="modal")=orderCall
 									+soc
 				+e.col.col-auto
 					+e.tel-block
 						+e.tel(href="tel:+79099969698")
 							+icon('phone')
 							span +7 909 996-96-98
-						+e.order-call(href="#" data-src='#modal-call' data-fancybox="modal")=orderCall
+						+e.order-call.modal-open-link(href="#" data-src='#modal-call' data-fancybox="modal")=orderCall
 				
 	// end top-nav
