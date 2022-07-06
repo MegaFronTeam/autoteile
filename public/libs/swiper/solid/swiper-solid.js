@@ -1,5 +1,5 @@
 /**
- * Swiper Svelte 8.3.0
+ * Swiper SolidJS 8.3.0
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -10,6 +10,6 @@
  * Released on: July 6, 2022
  */
 
-import Swiper from './swiper.svelte';
-import SwiperSlide from './swiper-slide.svelte';
-export { Swiper, SwiperSlide };
+export { Swiper } from './swiper.js';
+export { SwiperSlide } from './swiper-slide.js';
+export { useSwiperSlide, useSwiper } from './context.js';

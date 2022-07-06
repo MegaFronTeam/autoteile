@@ -53,8 +53,9 @@
 			"map":"Посмотреть на карте"
 		},
 		"footer":{
-			"copText":"© 2022 Autoteile Import. Все права защищены.",
-			"policy":"Политика конфиденциальности"
+			"copText":" Все права защищены.",
+			"policy":"Политика конфиденциальности",
+			"develop": "Разработка сайта"
 		}
 	},
 	"eng": {
@@ -110,8 +111,9 @@
 			"map":"View on the map"
 		},
 		"footer":{
-			"copText":"© 2022 Autoteile Import. All right reserved.",
-			"policy":"Private Policy"
+			"copText":" All right reserved.",
+			"policy":"Private Policy",
+			"develop": "Development "
 		}
 	},
 	"navLinks":[

@@ -1,58 +1,59 @@
 
 mixin modal(data) 
-	//  start modals
-	//- a(href="modal-call").link-modal-js modal-call 
-	div(id="modal-call"  style="display: none" )
-		+b.modal-win
-			+form-wrap
-				h3 Заказать звонок
-				.modal-win__caption Заполните форму и мы свяжемся с Вами в ближайшее время для уточнения деталей
-				+input("Ваше имя")(required)
-				+input("Ваш телефон",'tel')(required)
-				+input("Ваш email")(required)
-				+e.BUTTON.btn(type="submit"  ) Отправить заявку
-				.modal-win__agree Согласен(-а) на обработку и хранение моих персональных данных в соответствии с условиями
-	// #modal-call
-	div(id="modal-thanks"  style="display: none" )
-		+b.modal-win
-			+form-wrap
-				h3 Спасибо за обращение
-				.modal-win__caption Мы свяжемся с Вами в ближайшее время для уточнения деталей
-				+e.BUTTON.btn(type="submit"  ) Закрыть
-	// #modal-thanks
-	div(id="modal-map" style="display: none" )
-		+b.modal-map
-			+e.map--js
-				script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=6331e0a6-b922-4b24-a8f0-88e62d68142f')
-				+e.map-widget#map
-	
-	// end modals
+	if data==ru
+		//  start modals
+		//- a(href="modal-call").link-modal-js modal-call 
+		div(id="modal-call"  style="display: none" )
+			+b.modal-win
+				+form-wrap
+					h3 Заказать звонок
+					.modal-win__caption Заполните форму и мы свяжемся с Вами в ближайшее время для уточнения деталей
+					+input("Ваше имя")(required)
+					+input("Ваш телефон",'tel')(required)
+					+input("Ваш email")(required)
+					+e.BUTTON.btn(type="submit"  ) Отправить заявку
+					.modal-win__agree Согласен(-а) на обработку и хранение моих персональных данных в соответствии с условиями
+		// #modal-call
+		div(id="modal-thanks"  style="display: none" )
+			+b.modal-win
+				+form-wrap
+					h3 Спасибо за обращение
+					.modal-win__caption Мы свяжемся с Вами в ближайшее время для уточнения деталей
+					+e.BUTTON.btn(type="submit"  ) Закрыть
+		// #modal-thanks
+		div(id="modal-map" style="display: none" )
+			+b.modal-map
+				+e.map--js
+					script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=6331e0a6-b922-4b24-a8f0-88e62d68142f')
+					+e.map-widget#map
+		
+		// end modals
 
-mixin modal-eng(data) 
-	//  start modals
-	//- a(href="modal-call").link-modal-js modal-call 
-	div(id="modal-call"  style="display: none" )
-		+b.modal-win
-			+form-wrap
-				h3 Applicaton form
-				.modal-win__caption Fill out the form and we will contact you as soon as possible to clarify the details
-				+input("Your name")(required)
-				+input("Your number",'tel')(required)
-				+input("Your email")(required)
-				+e.BUTTON.btn(type="submit"  ) Send
-				.modal-win__agree I agree to the processing and storage of my personal data in accordance with the terms
-	// #modal-call
-	div(id="modal-thanks"  style="display: none" )
-		+b.modal-win
-			+form-wrap
-				h3 Thank you
-				.modal-win__caption We will contact you soon to clarify the details
-				+e.BUTTON.btn(type="submit"  ) Close
-	// #modal-thanks
-	div(id="modal-map" style="display: none" )
-		+b.modal-map
-			+e.map--js
-				script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=6331e0a6-b922-4b24-a8f0-88e62d68142f')
-				+e.map-widget#map
-	
-	// end modals
+	else
+		//  start modals
+		//- a(href="modal-call").link-modal-js modal-call 
+		div(id="modal-call"  style="display: none" )
+			+b.modal-win
+				+form-wrap
+					h3 Applicaton form
+					.modal-win__caption Fill out the form and we will contact you as soon as possible to clarify the details
+					+input("Your name")(required)
+					+input("Your number",'tel')(required)
+					+input("Your email")(required)
+					+e.BUTTON.btn(type="submit"  ) Send
+					.modal-win__agree I agree to the processing and storage of my personal data in accordance with the terms
+		// #modal-call
+		div(id="modal-thanks"  style="display: none" )
+			+b.modal-win
+				+form-wrap
+					h3 Thank you
+					.modal-win__caption We will contact you soon to clarify the details
+					+e.BUTTON.btn(type="submit"  ) Close
+		// #modal-thanks
+		div(id="modal-map" style="display: none" )
+			+b.modal-map
+				+e.map--js
+					script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=6331e0a6-b922-4b24-a8f0-88e62d68142f')
+					+e.map-widget#map
+		
+		// end modals

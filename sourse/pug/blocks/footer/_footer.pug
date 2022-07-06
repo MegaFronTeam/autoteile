@@ -1,4 +1,4 @@
-mixin footer(lang)
+mixin footer(data)
 	+b.FOOTER.footer
 		.container
 			+e.wrap
@@ -10,14 +10,15 @@ mixin footer(lang)
 								stop(offset='0%' stop-color='#1e1e1e;')
 								stop(offset='100%' stop-color='#1e1e1e;')
 							circle.progress-circle(stroke-linecap='round' cx='50' cy='50' r='48' stroke='url(#linear)' stroke-width='4' fill='none' stroke-dasharray='315'  stroke-mitterlimit='0' transform='rotate(-90 ) translate(-100 0)')
-				if (lang==1)
+				//- if (lang==ru)
+				if data
 					+e.copyright
-						+e.cop-text=ru.footer.copText
-						+e.policy(href="#")=ru.footer.policy
-					+e.development!=`Разработка сайта - <strong>Artsman</strong>`
-				else
-					+e.copyright
-						+e.cop-text=eng.footer.copText
-						+e.policy(href="#")=eng.footer.policy
-					+e.development!=`Development - <strong>Artsman</strong>`
+						+e.cop-text=`© 2022 Autoteile Import. ${data.copText}`
+						+e.policy(href="#")= data.policy
+					+e.development!= `${data.develop}- <strong>Artsman</strong>`
+				//- else
+				//- 	+e.copyright
+				//- 		+e.cop-text=eng.footer.copText
+				//- 		+e.policy(href="#")=eng.footer.policy
+				//- 	+e.development!=`Development - <strong>Artsman</strong>`
 				+soc

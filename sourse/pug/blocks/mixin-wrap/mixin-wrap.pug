@@ -32,11 +32,5 @@ mixin addblock()
 
 mixin changeLang(active)
 	+b.changeLang
-		if (active == 1)
-			+e.link.active(href="index.html") Рус
-		else
-			+e.link(href="index.html") Рус
-		if(active == 2)
-			+e.link.active(href="index-eng.html") Eng
-		else
-			+e.link(href="index-eng.html") Eng
+		+e.link(href="index.html" class= (active == "ru" ? "active" : " ")) Рус
+		+e.link(href="index-eng.html"  class=( active != "ru"  ? "active" : "")) Eng
