@@ -96,8 +96,9 @@ body {
 }
 
 .main-wrapper {
-	position: relative;
+	// position: relative;
 	width: 100%;
+	overflow: hidden;
 	// overflow: hidden;
 	// display: flex;
 	// flex-direction: row;
@@ -508,7 +509,7 @@ h2 {
 }
 
 .fp-watermark {
-	display: none;
+	// display: none;
 }
 
 .fp-right {
@@ -532,4 +533,13 @@ h2 {
 		background-color: #e9e9e9 !important;
 		transition-duration: 0.4s;
 	}
+}
+
+
+.fp-section.fp-table, .fp-slide.fp-table,  .fp-tableCell{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	justify-content: center;
 }

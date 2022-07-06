@@ -23,24 +23,20 @@
 	},
 	"navLinks":[
 		{
-			"url": "#headerBlock",
-			"menu":"header"
+			"url": "header",
+			"class":"active"
 		},
 		{
-			"url": "#sAbout",
-			"menu":"about"
+			"url": "about" 
 		},
 		{
-			"url": "#sProduct",
-			"menu":"product"
+			"url": "product" 
 		},
 		{
-			"url": "#sAdvantages",
-			"menu":"advantages"
+			"url": "advantages" 
 		},
 		{
-			"url": "#sContact",
-			"menu":"contact"
+			"url": "contact"
 		}
 	],
 	"social": [

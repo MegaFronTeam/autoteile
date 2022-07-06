@@ -294,25 +294,25 @@ function eventHandler() {
 	JSCCommon.heightwindow();
 	JSCCommon.makeDDGroup();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
-	JSCCommon.animateScroll();
+	// JSCCommon.animateScroll();
 
 	// JSCCommon.CustomInputFile(); 
-	var x = window.location.host;
-	let screenName;
-	screenName = document.body.dataset.bg;
-	if (screenName && x.includes("localhost:30")) {
-		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
-	}
+	// var x = window.location.host;
+	// let screenName;
+	// screenName = document.body.dataset.bg;
+	// if (screenName && x.includes("localhost:30")) {
+	// 	document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
+	// }
 	var wow = new WOW({
 		mobile: false,
 		animateClass: 'animate__animated',
 		live: true
 	});
 	let check = $('#fullpage');
-	if (check.length > 0) {
-	$('#fullpage').fullpage({
+	// if (check.length > 0) {
+	var myFullpage = new fullpage('#fullpage', {
 		scrollingSpeed: 1000,
-		loopHorizontal: true,
+		// loopHorizontal: true,
 		responsiveWidth: 992,
 		// responsiveHeight: 600,
 		// responsiveHeight: 600,
@@ -320,16 +320,17 @@ function eventHandler() {
 		animateAnchor: true,
 		navigation: true,
 		navigationPosition: 'right',
-		recordHistory: false,
+		// recordHistory: false,
 		css3: true,
 		scrollBar: true,
 		// verticalCentered: false,
 		// fixedElements: '.top-nav',
+		// lockAnchors: false,
+		menu: '.top-nav .menu',
 		anchors: ['header', 'about', 'product', 'advantages', 'contact'],
 		// anchors: ['headerBlock', 'sAbout', 'sProduct', 'sAdvantages', 'sContact'],
-		menu: '.top-nav',
 		// scrollBar: true,
-		parallaxOptions: { type: 'reveal', percentage: 62, property: 'translate' },
+		// parallaxOptions: { type: 'reveal', percentage: 62, property: 'translate' },
 		onLeave: function (origin, destination, direction) {
 			var loadedSection = destination.item;
 			// console.log(loadedSection);
@@ -422,7 +423,7 @@ function eventHandler() {
 		},
 		// continuousVertical: true,
 		// autoScrolling: true,
-		scrollOverflow: false,
+		// scrollOverflow: false,
 		// scrollOverflowReset: true,
 		// scrollOverflowReset: true,
 		afterRender: function () {
@@ -434,13 +435,16 @@ function eventHandler() {
 			
 		},
 	});
+	// $.fn.fullpage.setAllowScrolling(false);
+
+
 	$(document).on('click', '.footer__arrow', function () {
 		fullpage_api.moveSectionDown();
 	});
 	$(document).on('click', '.footer__arrow--is-down', function () {
 		fullpage_api.moveTo('header');
 	});
-}
+// }
 	// function setFixedNav() {
 	// 	let topNav = document.querySelector('.top-nav  ');
 	// 	if (!topNav) return;

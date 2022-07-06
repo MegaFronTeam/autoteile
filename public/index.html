@@ -10,320 +10,318 @@
 		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="libs/aos/aos.css" rel="stylesheet"/>
+		<link href="js/fullpage.js/fullpage.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
-		<link href="libs/fullpage.js/fullpage.min.css" rel="stylesheet"/>
 	</head>
-	<body data-bg="landing.jpg">
-		<div class="main-wrapper">
-			<div id="fullpage">
-				<!-- start top-nav-->
-				<div class="top-nav block-with-lazy">
-					<div class="container">
-						<div class="row">
-							<div class="top-nav__col col-auto d-lg-none">
-								<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
-								</div>
-							</div>
-							<div class="top-nav__col col-lg-auto col">
-								<div class="top-nav__logo-block">
-									<a class="top-nav__logo" href="/"><img src="img/svg/logo.svg" alt=""/>
+	<body data-bg="landing.jpg"> 
+		<!-- start top-nav-->
+		<div class="top-nav block-with-lazy">
+			<div class="container">
+				<div class="row">
+					<div class="top-nav__col col-auto d-lg-none">
+						<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+						</div>
+					</div>
+					<div class="top-nav__col col-lg-auto col">
+						<div class="top-nav__logo-block">
+							<a class="top-nav__logo" href="/"><img src="img/svg/logo.svg" alt=""/>
+							</a>
+						</div>
+					</div>
+					<div class="top-nav__col-menu col-lg col-12 order-lg-0 order-last">
+						<div class="menu-mobile menu-mobile--js">
+							<div class="menu-mobile__inner">
+								<ul class="menu" id="menu">
+									<li class="menu-item active" data-menuanchor="header"><a href="#header">Начало</a></li>
+									<li class="menu-item" data-menuanchor="about"><a href="#about">Кто мы</a></li>
+									<li class="menu-item" data-menuanchor="product"><a href="#product">Наша продукция</a></li>
+									<li class="menu-item" data-menuanchor="advantages"><a href="#advantages">Наши преимущества</a></li>
+									<li class="menu-item" data-menuanchor="contact"><a href="#contact">Наши координаты</a></li>
+								</ul>
+								<div class="top-nav__menu-footer">
+									<a class="top-nav__tel" href="tel:+79099969698">+7 909 996-96-98
 									</a>
-								</div>
-							</div>
-							<div class="top-nav__col-menu col-lg col-12 order-lg-0 order-last">
-								<div class="menu-mobile menu-mobile--js">
-									<div class="menu-mobile__inner">
-										<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-											<li class="menu-item" itemprop="item" data-menuanchor="header"><a href="#headerBlock" itemprop="url">Начало</a></li>
-											<li class="menu-item" itemprop="item" data-menuanchor="about"><a href="#sAbout" itemprop="url">Кто мы</a></li>
-											<li class="menu-item" itemprop="item" data-menuanchor="product"><a href="#sProduct" itemprop="url">Наша продукция</a></li>
-											<li class="menu-item" itemprop="item" data-menuanchor="advantages"><a href="#sAdvantages" itemprop="url">Наши преимущества</a></li>
-											<li class="menu-item" itemprop="item" data-menuanchor="contact"><a href="#sContact" itemprop="url">Наши координаты</a></li>
-										</ul>
-										<div class="top-nav__menu-footer">
-											<a class="top-nav__tel" href="tel:+79099969698">+7 909 996-96-98
+									<div class="top-nav__menu-footer-btn-wrap">
+										<a class="top-nav__order-call" href="#">Заказать звонок
+										</a>
+										<div class="soc">
+											<a class="soc__item soc__item--whatsapp" href="#">
+												<svg class="icon icon-whatsapp ">
+													<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+												</svg>
 											</a>
-											<div class="top-nav__menu-footer-btn-wrap">
-												<a class="top-nav__order-call" href="#">Заказать звонок
-												</a>
-												<div class="soc">
-													<a class="soc__item soc__item--whatsapp" href="#">
-														<svg class="icon icon-whatsapp ">
-															<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
-														</svg>
-													</a>
-													<a class="soc__item soc__item--telegram" href="#">
-														<svg class="icon icon-telegram ">
-															<use xlink:href="img/svg/sprite.svg#telegram"></use>
-														</svg>
-													</a>
-												</div>
-											</div>
+											<a class="soc__item soc__item--telegram" href="#">
+												<svg class="icon icon-telegram ">
+													<use xlink:href="img/svg/sprite.svg#telegram"></use>
+												</svg>
+											</a>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="top-nav__col col-auto">
-								<div class="top-nav__tel-block">
-									<a class="top-nav__tel" href="tel:+79099969698">
-										<svg class="icon icon-phone ">
-											<use xlink:href="img/svg/sprite.svg#phone"></use>
-										</svg><span>+7 909 996-96-98</span>
-									</a>
-									<a class="top-nav__order-call" href="#">Заказать звонок
-									</a>
-								</div>
-							</div>
+						</div>
+					</div>
+					<div class="top-nav__col col-auto">
+						<div class="top-nav__tel-block">
+							<a class="top-nav__tel" href="tel:+79099969698">
+								<svg class="icon icon-phone ">
+									<use xlink:href="img/svg/sprite.svg#phone"></use>
+								</svg><span>+7 909 996-96-98</span>
+							</a>
+							<a class="top-nav__order-call" href="#">Заказать звонок
+							</a>
 						</div>
 					</div>
 				</div>
-				<!-- end top-nav-->
-				<!-- start headerBlock-->
-				<div class="headerBlock section" id="headerBlock" data-anchor="header">
-					<div class="container">
-						<div class="headerBlock__wrap">
-							<div class="headerBlock__car"><img class="headerBlock__car-bg" src="img/car-bg.png" alt="" role="presentation"/>
-								<div class="headerBlock__car-item headerBlock__car-item--pos1"><img src="img/car-item-1.png" alt=""/>
-								</div>
-								<div class="headerBlock__car-item headerBlock__car-item--pos2"><img src="img/car-item-2.png" alt=""/>
-								</div>
-								<div class="headerBlock__car-item headerBlock__car-item--pos3"><img src="img/car-item-3.png" alt=""/>
-								</div>
-								<div class="headerBlock__car-item headerBlock__car-item--pos4"><img src="img/car-item-4.png" alt=""/>
-								</div>
-								<div class="headerBlock__car-item headerBlock__car-item--pos5"><img src="img/car-item-5.png" alt=""/>
-								</div>
-								<div class="headerBlock__car-item headerBlock__car-item--pos6"><img src="img/car-item-6.png" alt=""/>
-								</div>
-							</div>
-							<h1>Решения по поставке автозапчастей для легковых автомобилей по всему миру</h1>
-							<div class="headerBlock__caption d-lg-none">AUTOTEILE IMPORT&nbsp;&mdash; это инновационная компания, обладающая широкими возможностями международной организации
-							</div><a class="top-nav__order-call d-lg-none" href="#">Заказать звонок</a>
-						</div>
-						<div class="headerBlock__caption d-none d-lg-block">AUTOTEILE IMPORT&nbsp;&mdash; это инновационная компания, обладающая широкими возможностями международной организации
-						</div>
-					</div>
-				</div>
-				<!-- end headerBlock-->
-				<!-- start sAbout-->
-				<section class="sAbout section gray-bg" id="sAbout" data-anchor="about">
-					<div class="sAbout__bg"><img src="img/about-bg.png" alt=""/>
-					</div>
-					<div class="sAbout__pics">
-						<div class="sAbout__track"><img src="img/track.png" alt=""/>
-						</div>
-						<div class="sAbout__plane"><img src="img/plane.png" alt=""/>
-						</div>
-						<div class="sAbout__box"><img src="img/box.png" alt=""/>
-						</div>
-					</div>
-					<div class="container">
-						<div class="sAbout__text-block">
-							<h2>Кто мы</h2>
-							<p>Мы&nbsp;создаем современную, технологичную систему поставок авто комплектующих для партнёров. Благодаря инновационным технологиям и&nbsp;вниманию к деталям мы&nbsp;выстраиваем оптимальные маршруты, которые позволяют сократить время ожидания для наших клиентов.</p>
-							<p>Центральный офис компании расположен в&nbsp;Москве. Каждый день мы&nbsp;работаем над новыми и&nbsp;интересными предложениями в&nbsp;области поставок авто компонентов для наших клиентов из&nbsp;более чем 20&nbsp;стран Мира.</p>
-						</div>
-					</div>
-				</section>
-				<!-- end sAbout-->
-				<!-- start sProduct-->
-				<section class="sProduct section" id="sProduct" data-anchor="product">
-					<div class="container">
-						<div class="sProduct__wrap">
-							<div class="sProduct__product"><img class="sProduct__product-bg" src="img/product-bg.png" alt="" role="presentation"/>
-								<div class="sProduct__product-item sProduct__product-item--pos1"><img src="img/product-item-1.png" alt=""/>
-								</div>
-								<div class="sProduct__product-item sProduct__product-item--pos2"><img src="img/product-item-2.png" alt=""/>
-								</div>
-								<div class="sProduct__product-item sProduct__product-item--pos3"><img src="img/product-item-3.png" alt=""/>
-								</div>
-								<div class="sProduct__product-item sProduct__product-item--pos4"><img src="img/product-item-4.png" alt=""/>
-								</div>
-								<div class="sProduct__product-item sProduct__product-item--pos5"><img src="img/product-item-5.png" alt=""/>
-								</div>
-								<div class="sProduct__product-item sProduct__product-item--pos6"><img src="img/product-item-6.png" alt=""/>
-								</div>
-							</div>
-							<div class="sProduct__text-block">
-								<h2>Наша продукция</h2>
-								<p>Широкий ассортимент компании состоит из&nbsp;запчастей для легковых автомобилей, который наработан благодаря крепким партнерским отношениям с&nbsp;самыми престижными заводами-производителями ряда стран по&nbsp;всему Миру. Такое сотрудничество позволяет нам разрабатывать эксклюзивные предложения, а&nbsp;также выполнять различные запросы.</p>
-								<p>Помимо широкой линейки автозапчастей наша компания предлагает различные сервисы и&nbsp;решения, связанные с&nbsp;запчастями и&nbsp;мобильностью поставок. Решения позволяют нашим клиентам повышать эффективность своего бизнеса: открывать новые возможности управления поставками, отслеживать состояние и&nbsp;нахождение своих грузов, создавать благоприятные условия работы для сотрудников.</p>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- end sProduct-->
-				<!-- start sAdvantages-->
-				<section class="sAdvantages section gray-bg" id="sAdvantages" data-anchor="advantages">
-					<div class="container">
-						<div class="sAdvantages__wrap">
-							<h2>Наши преимущества</h2>
-							<div class="row">
-									<div class="col-lg-3 col-6">
-										<div class="sAdvantages__item">
-											<div class="sAdvantages__pic">
-												<svg class="icon icon-advantages-1 ">
-													<use xlink:href="img/svg/sprite.svg#advantages-1"></use>
-												</svg>
-											</div>
-											<div class="sAdvantages__text">Широчайший ассортимент мировых брендов в&nbsp;различных ценовых категориях
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-3 col-6">
-										<div class="sAdvantages__item">
-											<div class="sAdvantages__pic">
-												<svg class="icon icon-advantages-2 ">
-													<use xlink:href="img/svg/sprite.svg#advantages-2"></use>
-												</svg>
-											</div>
-											<div class="sAdvantages__text">Круглосуточный прием автоматической системой электронных заявок
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-3 col-6">
-										<div class="sAdvantages__item">
-											<div class="sAdvantages__pic">
-												<svg class="icon icon-advantages-3 ">
-													<use xlink:href="img/svg/sprite.svg#advantages-3"></use>
-												</svg>
-											</div>
-											<div class="sAdvantages__text">Индивидуальный подход к&nbsp;каждому клиенту
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-3 col-6">
-										<div class="sAdvantages__item">
-											<div class="sAdvantages__pic">
-												<svg class="icon icon-advantages-4 ">
-													<use xlink:href="img/svg/sprite.svg#advantages-4"></use>
-												</svg>
-											</div>
-											<div class="sAdvantages__text">Разнообразные формы приема заявок
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-3 col-6">
-										<div class="sAdvantages__item">
-											<div class="sAdvantages__pic">
-												<svg class="icon icon-advantages-5 ">
-													<use xlink:href="img/svg/sprite.svg#advantages-5"></use>
-												</svg>
-											</div>
-											<div class="sAdvantages__text">Склад при офисе
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-3 col-6">
-										<div class="sAdvantages__item">
-											<div class="sAdvantages__pic">
-												<svg class="icon icon-advantages-6 ">
-													<use xlink:href="img/svg/sprite.svg#advantages-6"></use>
-												</svg>
-											</div>
-											<div class="sAdvantages__text">Высококвалифицированный персонал
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-3 col-6">
-										<div class="sAdvantages__item">
-											<div class="sAdvantages__pic">
-												<svg class="icon icon-advantages-7 ">
-													<use xlink:href="img/svg/sprite.svg#advantages-7"></use>
-												</svg>
-											</div>
-											<div class="sAdvantages__text">Удобное время приёма заявок
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-3 col-6">
-										<div class="sAdvantages__item">
-											<div class="sAdvantages__pic">
-												<svg class="icon icon-advantages-8 ">
-													<use xlink:href="img/svg/sprite.svg#advantages-8"></use>
-												</svg>
-											</div>
-											<div class="sAdvantages__text">Всесторонняя техническая поддержка
-											</div>
-										</div>
-									</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- end sAdvantages-->
-				<!-- start sContact-->
-				<section class="sContact section" id="sContact" data-anchor="contact">
-					<div class="sContact__bg-text"><img src="img/svg/logo-bg.svg" alt=""/>
-					</div>
-					<div class="container">
-						<div class="sContact__wrap">
-							<div class="sContact__map-block"><img class="sContact__map-pic" src="img/map.jpg" alt="" role="presentation"/>
-								<a class="sContact__map-link" href="#">
-									<svg class="icon icon-map ">
-										<use xlink:href="img/svg/sprite.svg#map"></use>
-									</svg><span>Посмотреть на карте</span>
-								</a>
-							</div>
-							<div class="sContact__text-block">
-								<h2>Наши координаты</h2>
-								<div class="sContact__text-item">
-									<p><strong>Адрес</strong></p>
-									<p>111141, Москва, ул. Кусковская, д. 20А, ВАО, Перово</p>
-								</div>
-								<div class="sContact__text-item">
-									<p><strong>Телефон для связи</strong></p>
-									<div class="sContact__tel-wrap"><a href="tel:+79099969698">+7 909 996-96-98</a>
-										<div class="sContact__soc-wrap"><img src="img/svg/telegram.svg" alt=""/><img src="img/svg/whatsapp.svg" alt=""/>
-										</div>
-									</div>
-								</div>
-								<div class="sContact__text-item">
-									<p><strong>Отдел продаж</strong></p><a href="mailto:sales@sutoteile-import.ru">sales@sutoteile-import.ru</a>
-								</div>
-								<div class="sContact__text-item">
-									<p><strong>Отдел закупок</strong></p><a href="mailto:buying@sutoteile-import.ru">buying@sutoteile-import.ru</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- end sContact-->
-				<footer class="footer">
-					<div class="container">
-						<div class="footer__wrap">
-							<div class="footer__arrow-wrap">
-								<div class="footer__arrow p1">
-									<svg class="icon icon-arrow-down ">
-										<use xlink:href="img/svg/sprite.svg#arrow-down"></use>
-									</svg>
-								</div>
-							</div>
-							<div class="footer__copyright">
-								<div class="footer__cop-text">© 2022 Autoteile Import. Все права защищены.
-								</div>
-								<a class="footer__policy" href="#">Политика конфиденциальности
-								</a>
-							</div>
-							<div class="footer__development">Разработка сайта - <strong>Artsman</strong>
-							</div>
-							<div class="soc">
-								<a class="soc__item soc__item--whatsapp" href="#">
-									<svg class="icon icon-whatsapp ">
-										<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
-									</svg>
-								</a>
-								<a class="soc__item soc__item--telegram" href="#">
-									<svg class="icon icon-telegram ">
-										<use xlink:href="img/svg/sprite.svg#telegram"></use>
-									</svg>
-								</a>
-							</div>
-						</div>
-					</div>
-				</footer>
 			</div>
 		</div>
+		<!-- end top-nav-->
+		<div id="fullpage">
+			<!-- start headerBlock-->
+			<div class="headerBlock section">
+				<div class="container">
+					<div class="headerBlock__wrap">
+						<div class="headerBlock__car"><img class="headerBlock__car-bg" src="img/car-bg.png" alt="" role="presentation"/>
+							<div class="headerBlock__car-item headerBlock__car-item--pos1"><img src="img/car-item-1.png" alt=""/>
+							</div>
+							<div class="headerBlock__car-item headerBlock__car-item--pos2"><img src="img/car-item-2.png" alt=""/>
+							</div>
+							<div class="headerBlock__car-item headerBlock__car-item--pos3"><img src="img/car-item-3.png" alt=""/>
+							</div>
+							<div class="headerBlock__car-item headerBlock__car-item--pos4"><img src="img/car-item-4.png" alt=""/>
+							</div>
+							<div class="headerBlock__car-item headerBlock__car-item--pos5"><img src="img/car-item-5.png" alt=""/>
+							</div>
+							<div class="headerBlock__car-item headerBlock__car-item--pos6"><img src="img/car-item-6.png" alt=""/>
+							</div>
+						</div>
+						<h1>Решения по поставке автозапчастей для легковых автомобилей по всему миру</h1>
+						<div class="headerBlock__caption d-lg-none">AUTOTEILE IMPORT&nbsp;&mdash; это инновационная компания, обладающая широкими возможностями международной организации
+						</div><a class="top-nav__order-call d-lg-none" href="#">Заказать звонок</a>
+					</div>
+					<div class="headerBlock__caption d-none d-lg-block">AUTOTEILE IMPORT&nbsp;&mdash; это инновационная компания, обладающая широкими возможностями международной организации
+					</div>
+				</div>
+			</div>
+			<!-- end headerBlock-->
+			<!-- start sAbout-->
+			<section class="sAbout section gray-bg">
+				<div class="sAbout__bg"><img src="img/about-bg.png" alt=""/>
+				</div>
+				<div class="sAbout__pics">
+					<div class="sAbout__track"><img src="img/track.png" alt=""/>
+					</div>
+					<div class="sAbout__plane"><img src="img/plane.png" alt=""/>
+					</div>
+					<div class="sAbout__box"><img src="img/box.png" alt=""/>
+					</div>
+				</div>
+				<div class="container">
+					<div class="sAbout__text-block">
+						<h2>Кто мы</h2>
+						<p>Мы&nbsp;создаем современную, технологичную систему поставок авто комплектующих для партнёров. Благодаря инновационным технологиям и&nbsp;вниманию к деталям мы&nbsp;выстраиваем оптимальные маршруты, которые позволяют сократить время ожидания для наших клиентов.</p>
+						<p>Центральный офис компании расположен в&nbsp;Москве. Каждый день мы&nbsp;работаем над новыми и&nbsp;интересными предложениями в&nbsp;области поставок авто компонентов для наших клиентов из&nbsp;более чем 20&nbsp;стран Мира.</p>
+					</div>
+				</div>
+			</section>
+			<!-- end sAbout-->
+			<!-- start sProduct-->
+			<section class="sProduct section">
+				<div class="container">
+					<div class="sProduct__wrap">
+						<div class="sProduct__product"><img class="sProduct__product-bg" src="img/product-bg.png" alt="" role="presentation"/>
+							<div class="sProduct__product-item sProduct__product-item--pos1"><img src="img/product-item-1.png" alt=""/>
+							</div>
+							<div class="sProduct__product-item sProduct__product-item--pos2"><img src="img/product-item-2.png" alt=""/>
+							</div>
+							<div class="sProduct__product-item sProduct__product-item--pos3"><img src="img/product-item-3.png" alt=""/>
+							</div>
+							<div class="sProduct__product-item sProduct__product-item--pos4"><img src="img/product-item-4.png" alt=""/>
+							</div>
+							<div class="sProduct__product-item sProduct__product-item--pos5"><img src="img/product-item-5.png" alt=""/>
+							</div>
+							<div class="sProduct__product-item sProduct__product-item--pos6"><img src="img/product-item-6.png" alt=""/>
+							</div>
+						</div>
+						<div class="sProduct__text-block">
+							<h2>Наша продукция</h2>
+							<p>Широкий ассортимент компании состоит из&nbsp;запчастей для легковых автомобилей, который наработан благодаря крепким партнерским отношениям с&nbsp;самыми престижными заводами-производителями ряда стран по&nbsp;всему Миру. Такое сотрудничество позволяет нам разрабатывать эксклюзивные предложения, а&nbsp;также выполнять различные запросы.</p>
+							<p>Помимо широкой линейки автозапчастей наша компания предлагает различные сервисы и&nbsp;решения, связанные с&nbsp;запчастями и&nbsp;мобильностью поставок. Решения позволяют нашим клиентам повышать эффективность своего бизнеса: открывать новые возможности управления поставками, отслеживать состояние и&nbsp;нахождение своих грузов, создавать благоприятные условия работы для сотрудников.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sProduct-->
+			<!-- start sAdvantages-->
+			<section class="sAdvantages section gray-bg"> 
+				<div class="container">
+					<div class="sAdvantages__wrap">
+						<h2>Наши преимущества</h2>
+						<div class="row">
+								<div class="col-lg-3 col-6">
+									<div class="sAdvantages__item">
+										<div class="sAdvantages__pic">
+											<svg class="icon icon-advantages-1 ">
+												<use xlink:href="img/svg/sprite.svg#advantages-1"></use>
+											</svg>
+										</div>
+										<div class="sAdvantages__text">Широчайший ассортимент мировых брендов в&nbsp;различных ценовых категориях
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3 col-6">
+									<div class="sAdvantages__item">
+										<div class="sAdvantages__pic">
+											<svg class="icon icon-advantages-2 ">
+												<use xlink:href="img/svg/sprite.svg#advantages-2"></use>
+											</svg>
+										</div>
+										<div class="sAdvantages__text">Круглосуточный прием автоматической системой электронных заявок
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3 col-6">
+									<div class="sAdvantages__item">
+										<div class="sAdvantages__pic">
+											<svg class="icon icon-advantages-3 ">
+												<use xlink:href="img/svg/sprite.svg#advantages-3"></use>
+											</svg>
+										</div>
+										<div class="sAdvantages__text">Индивидуальный подход к&nbsp;каждому клиенту
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3 col-6">
+									<div class="sAdvantages__item">
+										<div class="sAdvantages__pic">
+											<svg class="icon icon-advantages-4 ">
+												<use xlink:href="img/svg/sprite.svg#advantages-4"></use>
+											</svg>
+										</div>
+										<div class="sAdvantages__text">Разнообразные формы приема заявок
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3 col-6">
+									<div class="sAdvantages__item">
+										<div class="sAdvantages__pic">
+											<svg class="icon icon-advantages-5 ">
+												<use xlink:href="img/svg/sprite.svg#advantages-5"></use>
+											</svg>
+										</div>
+										<div class="sAdvantages__text">Склад при офисе
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3 col-6">
+									<div class="sAdvantages__item">
+										<div class="sAdvantages__pic">
+											<svg class="icon icon-advantages-6 ">
+												<use xlink:href="img/svg/sprite.svg#advantages-6"></use>
+											</svg>
+										</div>
+										<div class="sAdvantages__text">Высококвалифицированный персонал
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3 col-6">
+									<div class="sAdvantages__item">
+										<div class="sAdvantages__pic">
+											<svg class="icon icon-advantages-7 ">
+												<use xlink:href="img/svg/sprite.svg#advantages-7"></use>
+											</svg>
+										</div>
+										<div class="sAdvantages__text">Удобное время приёма заявок
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3 col-6">
+									<div class="sAdvantages__item">
+										<div class="sAdvantages__pic">
+											<svg class="icon icon-advantages-8 ">
+												<use xlink:href="img/svg/sprite.svg#advantages-8"></use>
+											</svg>
+										</div>
+										<div class="sAdvantages__text">Всесторонняя техническая поддержка
+										</div>
+									</div>
+								</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sAdvantages-->
+			<!-- start sContact-->
+			<section class="sContact section">
+				<div class="sContact__bg-text"><img src="img/svg/logo-bg.svg" alt=""/>
+				</div>
+				<div class="container">
+					<div class="sContact__wrap">
+						<div class="sContact__map-block"><img class="sContact__map-pic" src="img/map.jpg" alt="" role="presentation"/>
+							<a class="sContact__map-link" href="#">
+								<svg class="icon icon-map ">
+									<use xlink:href="img/svg/sprite.svg#map"></use>
+								</svg><span>Посмотреть на карте</span>
+							</a>
+						</div>
+						<div class="sContact__text-block">
+							<h2>Наши координаты</h2>
+							<div class="sContact__text-item">
+								<p><strong>Адрес</strong></p>
+								<p>111141, Москва, ул. Кусковская, д. 20А, ВАО, Перово</p>
+							</div>
+							<div class="sContact__text-item">
+								<p><strong>Телефон для связи</strong></p>
+								<div class="sContact__tel-wrap"><a href="tel:+79099969698">+7 909 996-96-98</a>
+									<div class="sContact__soc-wrap"><img src="img/svg/telegram.svg" alt=""/><img src="img/svg/whatsapp.svg" alt=""/>
+									</div>
+								</div>
+							</div>
+							<div class="sContact__text-item">
+								<p><strong>Отдел продаж</strong></p><a href="mailto:sales@sutoteile-import.ru">sales@sutoteile-import.ru</a>
+							</div>
+							<div class="sContact__text-item">
+								<p><strong>Отдел закупок</strong></p><a href="mailto:buying@sutoteile-import.ru">buying@sutoteile-import.ru</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sContact-->
+		</div>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__wrap">
+					<div class="footer__arrow-wrap">
+						<div class="footer__arrow p1">
+							<svg class="icon icon-arrow-down ">
+								<use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="footer__copyright">
+						<div class="footer__cop-text">© 2022 Autoteile Import. Все права защищены.
+						</div>
+						<a class="footer__policy" href="#">Политика конфиденциальности
+						</a>
+					</div>
+					<div class="footer__development">Разработка сайта - <strong>Artsman</strong>
+					</div>
+					<div class="soc">
+						<a class="soc__item soc__item--whatsapp" href="#">
+							<svg class="icon icon-whatsapp ">
+								<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+							</svg>
+						</a>
+						<a class="soc__item soc__item--telegram" href="#">
+							<svg class="icon icon-telegram ">
+								<use xlink:href="img/svg/sprite.svg#telegram"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
 		<!--  start modals-->
 		<div id="modal-call" style="display: none">
 			<div class="modal-win">
@@ -354,7 +352,7 @@
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/aos/aos.js"> </script>
 		<script src="libs/wowjs/wow.min.js"> </script>
-		<script src="libs/fullpage.js/fullpage.min.js"></script>
+		<script src="js/fullpage.js/fullpage.min.js"></script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
 		<script src="js/common.js"></script>
 	</body>

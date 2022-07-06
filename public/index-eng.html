@@ -10,136 +10,132 @@
 		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="libs/aos/aos.css" rel="stylesheet"/>
+		<link href="js/fullpage.js/fullpage.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
-		<link href="libs/fullpage.js/fullpage.min.css" rel="stylesheet"/>
 	</head>
-	<body data-bg="landing.jpg">
-		<div class="main-wrapper">
-			<div id="fullpage">
-				<!-- start top-nav-->
-				<div class="top-nav block-with-lazy">
-					<div class="container">
-						<div class="row">
-							<div class="top-nav__col col-auto d-lg-none">
-								<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
-								</div>
-							</div>
-							<div class="top-nav__col col-lg-auto col">
-								<div class="top-nav__logo-block">
-									<a class="top-nav__logo" href="/"><img src="img/svg/logo.svg" alt=""/>
+	<body data-bg="landing.jpg"> 
+		<!-- start top-nav-->
+		<div class="top-nav block-with-lazy">
+			<div class="container">
+				<div class="row">
+					<div class="top-nav__col col-auto d-lg-none">
+						<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+						</div>
+					</div>
+					<div class="top-nav__col col-lg-auto col">
+						<div class="top-nav__logo-block">
+							<a class="top-nav__logo" href="/"><img src="img/svg/logo.svg" alt=""/>
+							</a>
+						</div>
+					</div>
+					<div class="top-nav__col-menu col-lg col-12 order-lg-0 order-last">
+						<div class="menu-mobile menu-mobile--js">
+							<div class="menu-mobile__inner">
+								<ul class="menu" id="menu">
+									<li class="menu-item active" data-menuanchor="header"><a href="#header">Start</a></li>
+									<li class="menu-item" data-menuanchor="about"><a href="#about">Who we are</a></li>
+									<li class="menu-item" data-menuanchor="product"><a href="#product">Our production</a></li>
+									<li class="menu-item" data-menuanchor="advantages"><a href="#advantages">Our advantages</a></li>
+									<li class="menu-item" data-menuanchor="contact"><a href="#contact">Our location</a></li>
+								</ul>
+								<div class="top-nav__menu-footer">
+									<a class="top-nav__tel" href="tel:+79099969698">+7 909 996-96-98
 									</a>
-								</div>
-							</div>
-							<div class="top-nav__col-menu col-lg col-12 order-lg-0 order-last">
-								<div class="menu-mobile menu-mobile--js">
-									<div class="menu-mobile__inner">
-										<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-											<li class="menu-item" itemprop="item" data-menuanchor="header"><a href="#headerBlock" itemprop="url">Start</a></li>
-											<li class="menu-item" itemprop="item" data-menuanchor="about"><a href="#sAbout" itemprop="url">Who we are</a></li>
-											<li class="menu-item" itemprop="item" data-menuanchor="product"><a href="#sProduct" itemprop="url">Our production</a></li>
-											<li class="menu-item" itemprop="item" data-menuanchor="advantages"><a href="#sAdvantages" itemprop="url">Our advantages</a></li>
-											<li class="menu-item" itemprop="item" data-menuanchor="contact"><a href="#sContact" itemprop="url">Our location</a></li>
-										</ul>
-										<div class="top-nav__menu-footer">
-											<a class="top-nav__tel" href="tel:+79099969698">+7 909 996-96-98
+									<div class="top-nav__menu-footer-btn-wrap">
+										<a class="top-nav__order-call" href="#">Application form
+										</a>
+										<div class="soc">
+											<a class="soc__item soc__item--whatsapp" href="#">
+												<svg class="icon icon-whatsapp ">
+													<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+												</svg>
 											</a>
-											<div class="top-nav__menu-footer-btn-wrap">
-												<a class="top-nav__order-call" href="#">Application form
-												</a>
-												<div class="soc">
-													<a class="soc__item soc__item--whatsapp" href="#">
-														<svg class="icon icon-whatsapp ">
-															<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
-														</svg>
-													</a>
-													<a class="soc__item soc__item--telegram" href="#">
-														<svg class="icon icon-telegram ">
-															<use xlink:href="img/svg/sprite.svg#telegram"></use>
-														</svg>
-													</a>
-												</div>
-											</div>
+											<a class="soc__item soc__item--telegram" href="#">
+												<svg class="icon icon-telegram ">
+													<use xlink:href="img/svg/sprite.svg#telegram"></use>
+												</svg>
+											</a>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="top-nav__col col-auto">
-								<div class="top-nav__tel-block">
-									<a class="top-nav__tel" href="tel:+79099969698">
-										<svg class="icon icon-phone ">
-											<use xlink:href="img/svg/sprite.svg#phone"></use>
-										</svg><span>+7 909 996-96-98</span>
-									</a>
-									<a class="top-nav__order-call" href="#">Application form
-									</a>
-								</div>
-							</div>
+						</div>
+					</div>
+					<div class="top-nav__col col-auto">
+						<div class="top-nav__tel-block">
+							<a class="top-nav__tel" href="tel:+79099969698">
+								<svg class="icon icon-phone ">
+									<use xlink:href="img/svg/sprite.svg#phone"></use>
+								</svg><span>+7 909 996-96-98</span>
+							</a>
+							<a class="top-nav__order-call" href="#">Application form
+							</a>
 						</div>
 					</div>
 				</div>
-				<!-- end top-nav-->
-				<!-- start headerBlock-->
-				<div class="headerBlock section" id="headerBlock" data-anchor="header">
-					<div class="container">
-						<div class="headerBlock__wrap">
-							<div class="headerBlock__car"><img class="headerBlock__car-bg" src="img/car-bg.png" alt="" role="presentation"/>
-								<div class="headerBlock__car-item headerBlock__car-item--pos1"><img src="img/car-item-1.png" alt=""/>
-								</div>
-								<div class="headerBlock__car-item headerBlock__car-item--pos2"><img src="img/car-item-2.png" alt=""/>
-								</div>
-								<div class="headerBlock__car-item headerBlock__car-item--pos3"><img src="img/car-item-3.png" alt=""/>
-								</div>
-								<div class="headerBlock__car-item headerBlock__car-item--pos4"><img src="img/car-item-4.png" alt=""/>
-								</div>
-								<div class="headerBlock__car-item headerBlock__car-item--pos5"><img src="img/car-item-5.png" alt=""/>
-								</div>
-								<div class="headerBlock__car-item headerBlock__car-item--pos6"><img src="img/car-item-6.png" alt=""/>
-								</div>
-							</div>
-							<h1>Решения по поставке автозапчастей для легковых автомобилей по всему миру</h1>
-							<div class="headerBlock__caption d-lg-none">AUTOTEILE IMPORT&nbsp;&mdash; это инновационная компания, обладающая широкими возможностями международной организации
-							</div><a class="top-nav__order-call d-lg-none" href="#">Заказать звонок</a>
-						</div>
-						<div class="headerBlock__caption d-none d-lg-block">AUTOTEILE IMPORT&nbsp;&mdash; это инновационная компания, обладающая широкими возможностями международной организации
-						</div>
-					</div>
-				</div>
-				<!-- end headerBlock-->
-				<footer class="footer">
-					<div class="container">
-						<div class="footer__wrap">
-							<div class="footer__arrow-wrap">
-								<div class="footer__arrow p1">
-									<svg class="icon icon-arrow-down ">
-										<use xlink:href="img/svg/sprite.svg#arrow-down"></use>
-									</svg>
-								</div>
-							</div>
-							<div class="footer__copyright">
-								<div class="footer__cop-text">© 2022 Autoteile Import. Все права защищены.
-								</div>
-								<a class="footer__policy" href="#">Политика конфиденциальности
-								</a>
-							</div>
-							<div class="footer__development">Разработка сайта - <strong>Artsman</strong>
-							</div>
-							<div class="soc">
-								<a class="soc__item soc__item--whatsapp" href="#">
-									<svg class="icon icon-whatsapp ">
-										<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
-									</svg>
-								</a>
-								<a class="soc__item soc__item--telegram" href="#">
-									<svg class="icon icon-telegram ">
-										<use xlink:href="img/svg/sprite.svg#telegram"></use>
-									</svg>
-								</a>
-							</div>
-						</div>
-					</div>
-				</footer>
 			</div>
 		</div>
+		<!-- end top-nav-->
+		<!-- start headerBlock-->
+		<div class="headerBlock section">
+			<div class="container">
+				<div class="headerBlock__wrap">
+					<div class="headerBlock__car"><img class="headerBlock__car-bg" src="img/car-bg.png" alt="" role="presentation"/>
+						<div class="headerBlock__car-item headerBlock__car-item--pos1"><img src="img/car-item-1.png" alt=""/>
+						</div>
+						<div class="headerBlock__car-item headerBlock__car-item--pos2"><img src="img/car-item-2.png" alt=""/>
+						</div>
+						<div class="headerBlock__car-item headerBlock__car-item--pos3"><img src="img/car-item-3.png" alt=""/>
+						</div>
+						<div class="headerBlock__car-item headerBlock__car-item--pos4"><img src="img/car-item-4.png" alt=""/>
+						</div>
+						<div class="headerBlock__car-item headerBlock__car-item--pos5"><img src="img/car-item-5.png" alt=""/>
+						</div>
+						<div class="headerBlock__car-item headerBlock__car-item--pos6"><img src="img/car-item-6.png" alt=""/>
+						</div>
+					</div>
+					<h1>Решения по поставке автозапчастей для легковых автомобилей по всему миру</h1>
+					<div class="headerBlock__caption d-lg-none">AUTOTEILE IMPORT&nbsp;&mdash; это инновационная компания, обладающая широкими возможностями международной организации
+					</div><a class="top-nav__order-call d-lg-none" href="#">Заказать звонок</a>
+				</div>
+				<div class="headerBlock__caption d-none d-lg-block">AUTOTEILE IMPORT&nbsp;&mdash; это инновационная компания, обладающая широкими возможностями международной организации
+				</div>
+			</div>
+		</div>
+		<!-- end headerBlock-->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__wrap">
+					<div class="footer__arrow-wrap">
+						<div class="footer__arrow p1">
+							<svg class="icon icon-arrow-down ">
+								<use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="footer__copyright">
+						<div class="footer__cop-text">© 2022 Autoteile Import. Все права защищены.
+						</div>
+						<a class="footer__policy" href="#">Политика конфиденциальности
+						</a>
+					</div>
+					<div class="footer__development">Разработка сайта - <strong>Artsman</strong>
+					</div>
+					<div class="soc">
+						<a class="soc__item soc__item--whatsapp" href="#">
+							<svg class="icon icon-whatsapp ">
+								<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+							</svg>
+						</a>
+						<a class="soc__item soc__item--telegram" href="#">
+							<svg class="icon icon-telegram ">
+								<use xlink:href="img/svg/sprite.svg#telegram"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
 		<!--  start modals-->
 		<div id="modal-call" style="display: none">
 			<div class="modal-win">
@@ -170,7 +166,7 @@
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/aos/aos.js"> </script>
 		<script src="libs/wowjs/wow.min.js"> </script>
-		<script src="libs/fullpage.js/fullpage.min.js"></script>
+		<script src="js/fullpage.js/fullpage.min.js"></script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
 		<script src="js/common.js"></script>
 	</body>
