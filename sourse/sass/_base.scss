@@ -98,7 +98,10 @@ body {
 .main-wrapper {
 	position: relative;
 	width: 100%;
-	// overflow: hidden;
+	// 
+	@include media-breakpoint-down(lg){
+		overflow: hidden;
+	}
 	// display: flex;
 	// flex-direction: row;
 	// /	overflow: scroll;
@@ -532,4 +535,12 @@ h2 {
 		background-color: #e9e9e9 !important;
 		transition-duration: 0.4s;
 	}
+}
+
+.ymaps-2-1-79-controls__control,.ymaps-2-1-79-map-copyrights-promo,.ymaps-2-1-79-copyright{
+	display: none !important;
+}
+.ymaps-2-1-79-events-pane{
+	background-color: #e6e6e6;
+	mix-blend-mode: color;
 }

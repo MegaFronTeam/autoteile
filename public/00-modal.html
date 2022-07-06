@@ -20,6 +20,7 @@
 					<h1>Страница для  демонстрации модальных окон</h1>
 					<div class="row">
 												<div class="col-auto mb-2"><a class="btn btn-primary" href="#" data-src="modal-call" data-fancybox="modal">modal-call</a></div>
+												<div class="col-auto mb-2"><a class="btn btn-primary" href="#" data-src="modal-map" data-fancybox="modal">modal-map</a></div>
 					</div>
 				</div>
 			</div>
@@ -29,25 +30,34 @@
 			<div class="modal-win">
 				<div class="form-wrap">
 					<form>
-						<div class="text-center">
-							<div class="form-wrap__title form-data h3 ttu">Обратный звонок
-							</div>
-							<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
-						</div>
-						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> 
+						<h3>Заказать звонок</h3>
+						<div class="modal-win__caption">Заполните форму и мы свяжемся с Вами в ближайшее время для уточнения деталей</div>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя" required="required"/>
 						</div>
 						<!-- +e.input-wrap-->
-						<button class="form-wrap__btn btn" type="submit"> 
-						</button>
-						<div class="form-wrap__policy">
-							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
-							</label>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Ваш телефон" required="required"/>
 						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваш email" required="required"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn" type="submit">Отправить заявку
+						</button>
+						<div class="modal-win__agree">Согласен(-а) на обработку и хранение моих персональных данных в соответствии с условиями</div>
 					</form>
 				</div>
 			</div>
 		</div>
 		<!-- #modal-call-->
+		<div id="modal-map" style="display: none">
+			<div class="modal-map">
+				<div class="modal-map__map modal-map__map--js">
+					<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=6331e0a6-b922-4b24-a8f0-88e62d68142f"></script>
+					<div class="modal-map__map-widget" id="map">
+					</div>
+				</div>
+			</div>
+		</div>
 		<!-- end modals-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
