@@ -217,16 +217,14 @@ const JSCCommon = {
 		}, { passive: true });
 	},
 	animateScroll() {
-		$(document).on('click', " .menu li a, .scroll-link", function () {
+
+		$(document).on('click', ".scroll-link", function () {
 			const elementClick = $(this).attr("href");
-			if (!document.querySelector(elementClick)) {
-				$(this).attr("href", '/' + elementClick)
-			}
-			else {
-				let destination = $(elementClick).offset().top;
-				$('html, body').animate({ scrollTop: destination - 80 }, 0);
-				return false;
-			}
+			const destination = $(elementClick).offset().top;
+
+			$('html, body').animate({ scrollTop: destination }, 1100);
+
+			return false;
 		});
 	},
 	getCurrentYear(el) {
@@ -296,7 +294,7 @@ function eventHandler() {
 	JSCCommon.heightwindow();
 	JSCCommon.makeDDGroup();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
-	// JSCCommon.animateScroll();
+	JSCCommon.animateScroll();
 
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
@@ -310,10 +308,12 @@ function eventHandler() {
 		animateClass: 'animate__animated',
 		live: true
 	});
+	let check = $('#fullpage');
+	if (check.length > 0) {
 	$('#fullpage').fullpage({
-		scrollingSpeed: 800,
+		scrollingSpeed: 1000,
 		loopHorizontal: true,
-		responsiveWidth: 1200,
+		responsiveWidth: 992,
 		// responsiveHeight: 600,
 		// responsiveHeight: 600,
 		// responsiveHeight: 1200,
@@ -325,49 +325,136 @@ function eventHandler() {
 		scrollBar: true,
 		// verticalCentered: false,
 		// fixedElements: '.top-nav',
-		anchors: ['header', 'sBase', 'sProf', 'sCorp', 'sWhy', 'sStart', 'sTeam', "sDemo", 'sRew', 'sGift', 'sLogo', 'sGift2', 'sFaq', 'sApplication'],
-		menu: '.menu',
+		anchors: ['header', 'about', 'product', 'advantages', 'contact'],
+		// anchors: ['headerBlock', 'sAbout', 'sProduct', 'sAdvantages', 'sContact'],
+		menu: '.top-nav',
 		// scrollBar: true,
 		parallaxOptions: { type: 'reveal', percentage: 62, property: 'translate' },
+		onLeave: function (origin, destination, direction) {
+			var loadedSection = destination.item;
+			// console.log(loadedSection);
+			let fArrow = document.querySelector('.footer__arrow');
+			if(loadedSection.classList.contains('headerBlock')){
+				fArrow.classList.add('p1');
+				if(fArrow.classList.contains('p2')){
+					fArrow.classList.remove('p2');
+				}
+				if(fArrow.classList.contains('p3')){
+					fArrow.classList.remove('p3');
+				}
+				if(fArrow.classList.contains('p4')){
+					fArrow.classList.remove('p4');
+				}
+				if(fArrow.classList.contains('footer__arrow--is-down')){
+					fArrow.classList.remove('footer__arrow--is-down');
+				}
+			}
+			if(loadedSection.classList.contains('sAbout')){
+				fArrow.classList.add('p2');
+				if(fArrow.classList.contains('p1')){
+					fArrow.classList.remove('p1');
+				}
+				if(fArrow.classList.contains('p3')){
+					fArrow.classList.remove('p3');
+				}
+				if(fArrow.classList.contains('p4')){
+					fArrow.classList.remove('p4');
+				}
+				if(fArrow.classList.contains('footer__arrow--is-down')){
+					fArrow.classList.remove('footer__arrow--is-down');
+				}
+			}
+			if(loadedSection.classList.contains('sProduct')){
+				fArrow.classList.add('p3');
+				if(fArrow.classList.contains('p1')){
+					fArrow.classList.remove('p1');
+				}
+				if(fArrow.classList.contains('p2')){
+					fArrow.classList.remove('p2');
+				}
+				if(fArrow.classList.contains('p4')){
+					fArrow.classList.remove('p4');
+				}
+				if(fArrow.classList.contains('footer__arrow--is-down')){
+					fArrow.classList.remove('footer__arrow--is-down');
+				}
+			}
+			if(loadedSection.classList.contains('sAdvantages')){
+				fArrow.classList.add('p4');
+				if(fArrow.classList.contains('p1')){
+					fArrow.classList.remove('p1');
+				}
+				if(fArrow.classList.contains('p2')){
+					fArrow.classList.remove('p2');
+				}
+				if(fArrow.classList.contains('p3')){
+					fArrow.classList.remove('p3');
+				}
+				if(fArrow.classList.contains('footer__arrow--is-down')){
+					fArrow.classList.remove('footer__arrow--is-down');
+				}
+			}
+			if (loadedSection.classList.contains('sContact')) {
+				document.querySelector('footer').classList.add('is-down');
+				fArrow.classList.add('footer__arrow--is-down');
+				if(fArrow.classList.contains('p1')){
+					fArrow.classList.remove('p1');
+				}
+				if(fArrow.classList.contains('p2')){
+					fArrow.classList.remove('p2');
+				}
+				if(fArrow.classList.contains('p3')){
+					fArrow.classList.remove('p3');
+				}
+				if(fArrow.classList.contains('p4')){
+					fArrow.classList.remove('p4');
+				}
+			} else {
+				document.querySelector('footer').classList.remove('is-down');
+				fArrow.classList.remove('footer__arrow--is-down');
+			}
+
+		},
 		afterLoad: function (origin, destination, direction) {
 			var loadedSection = destination.item;
 			// console.log(this);
-			if (loadedSection.classList.contains('section--dark')) {
-				document.querySelector('body').classList.add('body-dark')
-			} else {
-				document.querySelector('body').classList.remove('body-dark')
-
-			}
 
 		},
 		// continuousVertical: true,
 		// autoScrolling: true,
-		// scrollOverflow: true,
+		scrollOverflow: false,
 		// scrollOverflowReset: true,
 		// scrollOverflowReset: true,
 		afterRender: function () {
-			wow.init();
+			// wow.init();
 			// var rellax = new Rellax('.rellax', {});
 			// wow.init();
 
 
-
+			
 		},
 	});
-	function setFixedNav() {
-		let topNav = document.querySelector('.top-nav  ');
-		if (!topNav) return;
-		window.scrollY > 0
-			? topNav.classList.add('fixed')
-			: topNav.classList.remove('fixed');
-	}
+	$(document).on('click', '.footer__arrow', function () {
+		fullpage_api.moveSectionDown();
+	});
+	$(document).on('click', '.footer__arrow--is-down', function () {
+		fullpage_api.moveTo('header');
+	});
+}
+	// function setFixedNav() {
+	// 	let topNav = document.querySelector('.top-nav  ');
+	// 	if (!topNav) return;
+	// 	window.scrollY > 0
+	// 		? topNav.classList.add('fixed')
+	// 		: topNav.classList.remove('fixed');
+	// }
 
 	function whenResize() {
-		setFixedNav();
+		// setFixedNav();
 	}
 
 	window.addEventListener('scroll', () => {
-		setFixedNav();
+		// setFixedNav();
 
 	}, { passive: true })
 	window.addEventListener('resize', () => {

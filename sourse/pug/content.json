@@ -22,11 +22,26 @@
 		"orderCall":"Application form"
 	},
 	"navLinks":[
-		{"url": "#"},
-		{"url": "#"},
-		{"url": "#"},
-		{"url": "#"},
-		{"url": "#"}
+		{
+			"url": "#headerBlock",
+			"menu":"header"
+		},
+		{
+			"url": "#sAbout",
+			"menu":"about"
+		},
+		{
+			"url": "#sProduct",
+			"menu":"product"
+		},
+		{
+			"url": "#sAdvantages",
+			"menu":"advantages"
+		},
+		{
+			"url": "#sContact",
+			"menu":"contact"
+		}
 	],
 	"social": [
 		"fb",

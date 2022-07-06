@@ -38,6 +38,11 @@
 			margin-bottom: 0;
 		}
 	}
+	.menu-item.active{
+		a{
+			--line: #{$body-color};
+		}
+	}
 	a {
 		display: block;
 		position: relative;

@@ -34,11 +34,11 @@
 								<div class="menu-mobile menu-mobile--js">
 									<div class="menu-mobile__inner">
 										<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Start</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Who we are</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Our production</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Our advantages</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Our location</a></li>
+											<li class="menu-item" itemprop="item" data-menuanchor="header"><a href="#headerBlock" itemprop="url">Start</a></li>
+											<li class="menu-item" itemprop="item" data-menuanchor="about"><a href="#sAbout" itemprop="url">Who we are</a></li>
+											<li class="menu-item" itemprop="item" data-menuanchor="product"><a href="#sProduct" itemprop="url">Our production</a></li>
+											<li class="menu-item" itemprop="item" data-menuanchor="advantages"><a href="#sAdvantages" itemprop="url">Our advantages</a></li>
+											<li class="menu-item" itemprop="item" data-menuanchor="contact"><a href="#sContact" itemprop="url">Our location</a></li>
 										</ul>
 										<div class="top-nav__menu-footer">
 											<a class="top-nav__tel" href="tel:+79099969698">+7 909 996-96-98
@@ -79,7 +79,7 @@
 				</div>
 				<!-- end top-nav-->
 				<!-- start headerBlock-->
-				<div class="headerBlock section" id="headerBlock">
+				<div class="headerBlock section" id="headerBlock" data-anchor="header">
 					<div class="container">
 						<div class="headerBlock__wrap">
 							<div class="headerBlock__car"><img class="headerBlock__car-bg" src="img/car-bg.png" alt="" role="presentation"/>
@@ -109,7 +109,10 @@
 					<div class="container">
 						<div class="footer__wrap">
 							<div class="footer__arrow-wrap">
-								<div class="footer__arrow">
+								<div class="footer__arrow p1">
+									<svg class="icon icon-arrow-down ">
+										<use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+									</svg>
 								</div>
 							</div>
 							<div class="footer__copyright">

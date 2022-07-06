@@ -5,6 +5,9 @@
 	&.is-down {
 		--db: block;
 		--dbsoc: none;
+		.footer__arrow .icon {
+			transform: scaleY(-1);
+		}
 	}
 	@include media-breakpoint-down(lg) {
 		padding-bottom: 40px;
@@ -24,6 +27,62 @@
 		height: rem(60);
 		@include media-breakpoint-down(lg) {
 			display: none;
+		}
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.icon {
+			font-size: rem(24);
+			transition-duration: 0.4s;
+			position: relative;
+			z-index: 2;
+		}
+		border-radius: 50%;
+		border: 1px solid #e6e6e6;
+		cursor: pointer;
+		position: relative;
+		transition-duration: 0.4s;
+		&.p1,
+		&.p3,
+		&--is-down {
+			--bg: #ffffff;
+		}
+		&.p2,
+		&.p4 {
+			--bg: #f6f6f6;
+		}
+		&.p1 {
+			background-image: linear-gradient(-18deg, #e6e6e6 50%, transparent 50%),
+				linear-gradient(90deg, #e6e6e6 50%, $body-color 50%);
+		}
+		&.p2 {
+			background-image: linear-gradient(54deg, #e6e6e6 50%, transparent 50%),
+				linear-gradient(90deg, #e6e6e6 50%, $body-color 50%);
+		}
+		&.p3 {
+			background-image: linear-gradient(126deg, transparent 50%, $body-color 50%),
+				linear-gradient(90deg, #e6e6e6 50%, $body-color 50%);
+		}
+		&.p4 {
+			background-image: linear-gradient(198deg, transparent 50%, $body-color 50%),
+				linear-gradient(90deg, #e6e6e6 50%, $body-color 50%);
+		}
+		&--is-down {
+			background-image: linear-gradient(270deg, transparent 50%, $body-color 50%),
+				linear-gradient(90deg, #e6e6e6 50%, $body-color 50%);
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: rem(57);
+			height: rem(57);
+			border-radius: 50%;
+			background-color: var(--bg);
+			transform: translate(-50%, -50%);
+			transition-duration: 0.4s;
+			z-index: 1;
 		}
 	}
 	&__wrap {

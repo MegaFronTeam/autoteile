@@ -34,11 +34,11 @@
 								<div class="menu-mobile menu-mobile--js">
 									<div class="menu-mobile__inner">
 										<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Начало</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Кто мы</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наша продукция</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши преимущества</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши координаты</a></li>
+											<li class="menu-item" itemprop="item" data-menuanchor="header"><a href="#headerBlock" itemprop="url">Начало</a></li>
+											<li class="menu-item" itemprop="item" data-menuanchor="about"><a href="#sAbout" itemprop="url">Кто мы</a></li>
+											<li class="menu-item" itemprop="item" data-menuanchor="product"><a href="#sProduct" itemprop="url">Наша продукция</a></li>
+											<li class="menu-item" itemprop="item" data-menuanchor="advantages"><a href="#sAdvantages" itemprop="url">Наши преимущества</a></li>
+											<li class="menu-item" itemprop="item" data-menuanchor="contact"><a href="#sContact" itemprop="url">Наши координаты</a></li>
 										</ul>
 										<div class="top-nav__menu-footer">
 											<a class="top-nav__tel" href="tel:+79099969698">+7 909 996-96-98
@@ -79,7 +79,7 @@
 				</div>
 				<!-- end top-nav-->
 				<!-- start headerBlock-->
-				<div class="headerBlock section" id="headerBlock">
+				<div class="headerBlock section" id="headerBlock" data-anchor="header">
 					<div class="container">
 						<div class="headerBlock__wrap">
 							<div class="headerBlock__car"><img class="headerBlock__car-bg" src="img/car-bg.png" alt="" role="presentation"/>
@@ -106,7 +106,7 @@
 				</div>
 				<!-- end headerBlock-->
 				<!-- start sAbout-->
-				<section class="sAbout section gray-bg" id="sAbout">
+				<section class="sAbout section gray-bg" id="sAbout" data-anchor="about">
 					<div class="sAbout__bg"><img src="img/about-bg.png" alt=""/>
 					</div>
 					<div class="sAbout__pics">
@@ -127,7 +127,7 @@
 				</section>
 				<!-- end sAbout-->
 				<!-- start sProduct-->
-				<section class="sProduct section" id="sProduct">
+				<section class="sProduct section" id="sProduct" data-anchor="product">
 					<div class="container">
 						<div class="sProduct__wrap">
 							<div class="sProduct__product"><img class="sProduct__product-bg" src="img/product-bg.png" alt="" role="presentation"/>
@@ -154,7 +154,7 @@
 				</section>
 				<!-- end sProduct-->
 				<!-- start sAdvantages-->
-				<section class="sAdvantages section gray-bg" id="sAdvantages">
+				<section class="sAdvantages section gray-bg" id="sAdvantages" data-anchor="advantages">
 					<div class="container">
 						<div class="sAdvantages__wrap">
 							<h2>Наши преимущества</h2>
@@ -253,7 +253,7 @@
 				</section>
 				<!-- end sAdvantages-->
 				<!-- start sContact-->
-				<section class="sContact section" id="sContact">
+				<section class="sContact section" id="sContact" data-anchor="contact">
 					<div class="sContact__bg-text"><img src="img/svg/logo-bg.svg" alt=""/>
 					</div>
 					<div class="container">
@@ -293,7 +293,10 @@
 					<div class="container">
 						<div class="footer__wrap">
 							<div class="footer__arrow-wrap">
-								<div class="footer__arrow">
+								<div class="footer__arrow p1">
+									<svg class="icon icon-arrow-down ">
+										<use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+									</svg>
 								</div>
 							</div>
 							<div class="footer__copyright">

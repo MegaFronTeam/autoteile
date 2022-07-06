@@ -7,7 +7,7 @@
 mixin mnu(menu)
 	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
 		each link,key in menu
-			li.menu-item(itemprop="item" ): a(href= navLinks[key].url itemprop="url")= link.name
+			li.menu-item(itemprop="item" data-menuanchor=navLinks[key].menu): a(href= navLinks[key].url itemprop="url")= link.name
 
 
 //- menu
