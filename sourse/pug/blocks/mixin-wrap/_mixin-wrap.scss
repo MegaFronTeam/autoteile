@@ -96,3 +96,41 @@
 }
 .soc {
 }
+
+.changeLang {
+	position: fixed;
+	z-index: 10;
+	@include media-breakpoint-down(lg) {
+		display: none;
+	}
+	left: rem(3);
+	top: 50%;
+	transform: translateY(-50%) rotate(-90deg);
+	display: flex;
+	align-items: center;
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 50%;
+		height: 20px;
+		width: 0;
+		border-left: 2px solid #e6e6e6;
+	}
+	&__link {
+		color: #8f8f8f;
+		font-weight: 600;
+		font-size: rem(14);
+		line-height: calc(20 / 14);
+		&:first-child {
+			margin-right: rem(20);
+		}
+		&:last-child {
+			margin-left: rem(20);
+		}
+		&.active,
+		&:hover {
+			color: $body-color;
+		}
+	}
+}

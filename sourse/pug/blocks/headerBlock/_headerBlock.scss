@@ -11,12 +11,16 @@
 			margin: 0 auto;
 			justify-content: space-between;
 			padding-top: 12.6vh;
+			padding-left: rem(40);
+			padding-right: rem(40);
 		}
 		padding-top: 4.57vh;
 		flex-direction: column;
 		align-items: center;
 		@include media-breakpoint-up(xxl) {
 			max-width: rem(1300);
+			padding-left: 0;
+			padding-right: 0;
 		}
 	}
 	h1 {
