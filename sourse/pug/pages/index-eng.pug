@@ -1,15 +1,11 @@
 extends ../layout/main.pug
 
-include ../blocks/header/_header.pug
-include ../blocks/topLine/_topLine.pug
 include ../blocks/top-nav/_top-nav.pug 
 include ../blocks/headerBlock/_headerBlock.pug
-include ../blocks/sForm/_sForm.pug
-include ../blocks/sContent/_sContent.pug
- 
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sProduct/_sProduct.pug
+include ../blocks/sAdvantages/_sAdvantages.pug
 include ../blocks/sContact/_sContact.pug
-include ../blocks/sForm/_sForm.pug
-include ../blocks/sForm/_sForm.pug
 include ../blocks/footer/_footer.pug
 
 block variables
@@ -17,6 +13,7 @@ block variables
 	- let  bg= 'landing.jpg'
 	- let lan= eng
 	- let menu= lan.nav
+	- let header = lan.header
 	- let la = lan.lang
 	- let orderCall = lan.orderCall
 
@@ -28,9 +25,13 @@ block pagecontent
 	+top-nav(orderCall)
 		+mnu(menu)
 	+headerBlock
+	+sAbout
+	+sProduct
+	+sAdvantages
+	+sContact
 	+footer
+	+changeLang(2)
 
-      
 
 
 

@@ -28,3 +28,15 @@ mixin addblock()
 		+e.btn--minus(type="button")
 		input(type="text" value="1")
 		+e.btn--plus(type="button")
+
+
+mixin changeLang(active)
+	+b.changeLang
+		if (active == 1)
+			+e.link.active(href="index.html") Рус
+		else
+			+e.link(href="index.html") Рус
+		if(active == 2)
+			+e.link.active(href="index-eng.html") Eng
+		else
+			+e.link(href="index-eng.html") Eng

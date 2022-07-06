@@ -13,8 +13,10 @@ block variables
 	- let  bg= 'landing.jpg'
 	- let lan= ru
 	- let menu= lan.nav
+	- let header = lan.header
 	- let la = lan.lang
 	- let orderCall = lan.orderCall
+
 
 block title
 	- let  title= 'AUTOTEILE IMPORT'
@@ -30,6 +32,8 @@ block pagecontent
 		+sAdvantages
 		+sContact
 	+footer
+	//- +changeLang(1)
+	
 
 
 
