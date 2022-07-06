@@ -3,14 +3,14 @@ mixin sProduct(data)
 	+b.SECTION.sProduct.section&attributes(attributes)
 		.container
 			+e.wrap
-				+e.product
+				+e.product(data-aos="fade-up" data-aos-duration="600" data-aos-delay="800")
 					+e.IMG.product-bg(src="img/product-bg.png", alt="")
 					mixin item(num)
 						+e.product-item(class=`--pos${num}`)
 							img(src=`img/product-item-${num}.png`, alt="")
 					- for(let x = 1;x<7;x++)
 						+item(x)
-				+e.text-block
+				+e.text-block(data-aos="fade-up" data-aos-duration="600" data-aos-delay="200")
 					h2= data.title
 					each p in data.content
 						p!= p

@@ -5,27 +5,27 @@ mixin sContact(data)
 			img(src="img/svg/logo-bg.svg", alt="")
 		.container
 			+e.wrap
-				+e.map-block
+				+e.map-block(data-aos="fade-up" data-aos-duration="500" data-aos-delay="2700")
 					+e.IMG.map-pic(src="img/map.jpg", alt="")
 					+e.map-link(href="#" data-src="#modal-map" data-fancybox="modal")
 						+icon('map')
 						span=data.map
 				+e.text-block
-					h2=data.title
-					+e.text-item
+					h2(data-aos="fade-up" data-aos-duration="500" data-aos-delay="200")=data.title
+					+e.text-item(data-aos="fade-up" data-aos-duration="500" data-aos-delay="700")
 						p!=`<strong>${data.subtitle1}</strong>`
 						p=data.caption
-					+e.text-item
+					+e.text-item(data-aos="fade-up" data-aos-duration="500" data-aos-delay="1200")
 						p!=`<strong>${data.subtitle2}</strong>`
 						+e.tel-wrap
 							a(href="tel:+79099969698") +7 909 996-96-98
 							+e.soc-wrap
 								img(src="img/svg/telegram.svg", alt="")
 								img(src="img/svg/whatsapp.svg", alt="")
-					+e.text-item
+					+e.text-item(data-aos="fade-up" data-aos-duration="500" data-aos-delay="1700")
 						p!=`<strong>${data.subtitle3}</strong>`
 						a(href="mailto:sales@sutoteile-import.ru") sales@sutoteile-import.ru
-					+e.text-item
+					+e.text-item(data-aos="fade-up" data-aos-duration="500" data-aos-delay="2200")
 						p!=`<strong>${data.subtitle4}</strong>`
 						a(href="mailto:buying@sutoteile-import.ru") buying@sutoteile-import.ru
 	// end sContact

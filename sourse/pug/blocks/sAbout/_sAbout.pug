@@ -4,14 +4,14 @@ mixin sAbout(data)
 		+e.bg
 			img(src="img/about-bg.png", alt="")
 		+e.pics
-			+e.track
+			+e.track(data-aos="fade-up" data-aos-duration="600" data-aos-delay="200")
 				img(src="img/track.png", alt="")
-			+e.plane
+			+e.plane(data-aos="fade-up" data-aos-duration="600" data-aos-delay="600")
 				img(src="img/plane.png", alt="")
-			+e.box
+			+e.box(data-aos="fade-up" data-aos-duration="600" data-aos-delay="1000")
 				img(src="img/box.png", alt="")
 		.container
-			+e.text-block
+			+e.text-block(data-aos="fade-up" data-aos-duration="600" data-aos-delay="1400")
 				h2= data.title
 				each p in data.content
 					p!= p
