@@ -13,6 +13,13 @@ mixin modal()
 				+e.BUTTON.btn(type="submit"  ) Отправить заявку
 				.modal-win__agree Согласен(-а) на обработку и хранение моих персональных данных в соответствии с условиями
 	// #modal-call
+	div(id="modal-thanks"  style="display: none" )
+		+b.modal-win
+			+form-wrap
+				h3 Спасибо за обращение
+				.modal-win__caption Мы свяжемся с Вами в ближайшее время для уточнения деталей
+				+e.BUTTON.btn(type="submit"  ) Закрыть
+	// #modal-thanks
 	div(id="modal-map" style="display: none" )
 		+b.modal-map
 			+e.map--js
