@@ -1,17 +1,24 @@
 <script>
-  import { onMount, onDestroy, afterUpdate, createEventDispatcher, tick, setContext } from 'svelte';
-  import Swiper from 'swiper';
-  import { getParams } from '../components-shared/get-params.js';
-  import { mountSwiper } from '../components-shared/mount-swiper.js';
+  import {
+    onMount,
+    onDestroy,
+    afterUpdate,
+    createEventDispatcher,
+    tick,
+    setContext,
+    beforeUpdate,
+  } from 'svelte';
+  import { getParams } from './get-params.js';
+  import { initSwiper, mountSwiper } from './init-swiper.js';
   import {
     needsScrollbar,
     needsNavigation,
     needsPagination,
     uniqueClasses,
     extend,
-  } from '../components-shared/utils.js';
-  import { getChangedParams } from '../components-shared/get-changed-params.js';
-  import { updateSwiper } from '../components-shared/update-swiper.js';
+  } from './utils.js';
+  import { getChangedParams } from './get-changed-params.js';
+  import { updateSwiper } from './update-swiper.js';
 
   const dispatch = createEventDispatcher();
 
@@ -79,7 +86,7 @@
     },
   });
 
-  swiperInstance = new Swiper(swiperParams);
+  swiperInstance = initSwiper(swiperParams);
   setContext('swiper', swiperInstance);
   if (swiperInstance.virtual && swiperInstance.params.virtual.enabled) {
     const extendWith = {
