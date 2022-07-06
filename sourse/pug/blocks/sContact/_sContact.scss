@@ -128,11 +128,13 @@
 		}
 	}
 	&__map-link {
-		width: rem(240);
+		// width: rem(240);
+		white-space: nowrap;
+		flex-wrap: nowrap;
 		height: rem(60);
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		
 		padding-left: rem(21);
 		padding-right: rem(21);
 		position: absolute;
@@ -155,6 +157,7 @@
 		.icon {
 			font-size: rem(30);
 			color: #1E1E1E !important;
+			margin-right: rem(10);
 		}
 	}
 } // end.sContact

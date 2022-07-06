@@ -9,28 +9,29 @@ include ../blocks/sContact/_sContact.pug
 include ../blocks/footer/_footer.pug
 
 block variables
-	- let  mainPage= null 
-	- let  bg= 'landing.jpg'
-	- let lan= eng
-	- let menu= lan.nav
-	- let header = lan.header
-	- let la = lan.lang
-	- let orderCall = lan.orderCall
+	-
+		let  mainPage= null 
+		let lan= eng 
+		let la = lan.lang
+
 
 block title
-	- let  title= 'AUTOTEILE IMPORT'
+	- let  title= lan.title
 	title= title
 block pagecontent
 	//- +mob-mnu()
-	+top-nav(orderCall)
-		+mnu(menu)
-	//- +headerBlock
-	//- +sAbout
-	//- +sProduct
-	//- +sAdvantages
-	//- +sContact
-	//- +footer
-	//- +changeLang(2)
+	+top-nav(lan.orderCall)
+		+mnu(lan.nav)
+	#fullpage
+		+headerBlock(lan.header)
+		+sAbout(lan.about)
+		+sProduct(lan.product)
+		+sAdvantages(lan.advantages)
+		+sContact(lan.contact)
+	+footer(2)
+	+modal-eng()
+	//- +changeLang(1)
+	
 
 
 

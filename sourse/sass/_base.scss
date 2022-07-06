@@ -553,3 +553,19 @@ h2 {
 	background-color: #e6e6e6;
 	mix-blend-mode: color;
 }
+.fullpage-wrapper{
+	@include media-breakpoint-down(lg){
+		overflow: hidden;
+	}
+}
+
+.fp-tableCell,.section{
+	@include media-breakpoint-down(lg){
+		height: auto !important;
+	}
+}
+.fp-section.fp-table{
+	@include media-breakpoint-down(lg){
+		display: block;
+	}
+}
