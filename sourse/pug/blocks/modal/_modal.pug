@@ -8,10 +8,10 @@ mixin modal(data)
 				+form-wrap
 					h3 Заказать звонок
 					.modal-win__caption Заполните форму и мы свяжемся с Вами в ближайшее время для уточнения деталей
-					+input("Ваше имя")(required)
+					+input("Ваше имя")
 					+input("Ваш телефон",'tel')(required)
-					+input("Ваш email")(required)
-					+e.BUTTON.btn(type="submit"  ) Отправить заявку
+					+input("Ваш email")
+					+e.BUTTON.btn.btn-black(type="submit" ) Отправить заявку
 					.modal-win__agree Согласен(-а) на обработку и хранение моих персональных данных в соответствии с условиями
 		// #modal-call
 		div(id="modal-thanks"  style="display: none" )
@@ -19,7 +19,7 @@ mixin modal(data)
 				+form-wrap
 					h3 Спасибо за обращение
 					.modal-win__caption Мы свяжемся с Вами в ближайшее время для уточнения деталей
-					+e.BUTTON.btn(type="submit"  ) Закрыть
+					+e.BUTTON.btn.btn-black(type="submit"  ) Закрыть
 		// #modal-thanks
 		div(id="modal-map" style="display: none" )
 			+b.modal-map
@@ -37,10 +37,10 @@ mixin modal(data)
 				+form-wrap
 					h3 Applicaton form
 					.modal-win__caption Fill out the form and we will contact you as soon as possible to clarify the details
-					+input("Your name")(required)
+					+input("Your name")
 					+input("Your number",'tel')(required)
-					+input("Your email")(required)
-					+e.BUTTON.btn(type="submit"  ) Send
+					+input("Your email")
+					+e.BUTTON.btn.btn-black(type="submit"  ) Send
 					.modal-win__agree I agree to the processing and storage of my personal data in accordance with the terms
 		// #modal-call
 		div(id="modal-thanks"  style="display: none" )
@@ -48,7 +48,7 @@ mixin modal(data)
 				+form-wrap
 					h3 Thank you
 					.modal-win__caption We will contact you soon to clarify the details
-					+e.BUTTON.btn(type="submit"  ) Close
+					+e.BUTTON.btn.btn-black(type="submit"  ) Close
 		// #modal-thanks
 		div(id="modal-map" style="display: none" )
 			+b.modal-map

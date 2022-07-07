@@ -11,8 +11,8 @@ mixin headerBlock(data)
 							img(src=`img/car-item-${x}.png`, alt="")
 						//- +item(x)
 				h1(data-aos="fade-up" data-aos-duration="600" data-aos-delay="600")!= data.title 
-				+e.caption.d-lg-none(data-aos="fade-up" data-aos-duration="600" data-aos-delay="1200")!= data.caption 
-				a.top-nav__order-call.modal-open-link.d-lg-none(href="#" data-src='#modal-call' data-fancybox="modal" data-aos="fade-up" data-aos-duration="600" data-aos-delay="1800")!= data.order 
+				+e.caption.d-lg-none!= data.caption 
+				a.top-nav__order-call.modal-open-link.btn-black.d-lg-none(href="#" data-src='#modal-call' data-fancybox="modal" )!= data.order 
 			+e.caption.d-none.d-lg-block(data-aos="fade-up" data-aos-duration="600" data-aos-delay="1200")!= data.caption 
 			
 	// end headerBlock

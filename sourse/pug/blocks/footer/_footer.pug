@@ -15,7 +15,7 @@ mixin footer(data)
 					+e.copyright
 						+e.cop-text=`© 2022 Autoteile Import. ${data.copText}`
 						+e.policy(href="#")= data.policy
-					+e.development!= `${data.develop}- <strong>Artsman</strong>`
+					+e.development!= `${data.develop}- <a href="https://t.me/arts_man" target="_blank">Artsman</a>`
 				//- else
 				//- 	+e.copyright
 				//- 		+e.cop-text=eng.footer.copText

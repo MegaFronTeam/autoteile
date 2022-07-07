@@ -2,6 +2,9 @@
 	margin-top: auto;
 	--db: none;
 	--dbsoc: flex;
+	@include media-breakpoint-down(lg){
+		--db:block !important;
+	}
 	&.is-down {
 		--db: block;
 		--dbsoc: none;
@@ -140,7 +143,11 @@
 		opacity: 0;
 		pointer-events: none;
 		transition-duration: 0.4s;
-		&.visible{
+		@include media-breakpoint-down(lg){
+			opacity: 1 !important;
+			pointer-events: all !important;
+		}
+		&.visible {
 			opacity: 1;
 			pointer-events: all;
 		}
@@ -156,9 +163,17 @@
 		transition-duration: 0.4s;
 		opacity: 0;
 		pointer-events: none;
-		&.visible{
+		@include media-breakpoint-down(lg){
+			opacity: 1 !important;
+			pointer-events: all !important;
+		}
+		&.visible {
 			opacity: 1;
 			pointer-events: all;
+		}
+		a {
+			color: $body-color !important;
+			font-weight: bold;
 		}
 	}
 	&__copyright {
@@ -171,7 +186,7 @@
 		transition-duration: 0.4s;
 		opacity: 0;
 		pointer-events: none;
-		&.visible{
+		&.visible {
 			opacity: 1;
 			pointer-events: all;
 		}
@@ -187,6 +202,10 @@
 	}
 	&__policy {
 		font-size: rem(14);
-		color: #8f8f8f;
+		color: #8f8f8f !important;
+		opacity: 1;
+		&:hover{
+			opacity: 0.8;
+		}
 	}
 }

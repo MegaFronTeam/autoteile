@@ -7,12 +7,13 @@
 	max-width: 100%;
 	width: 100%;
 	height: 100%;
-	@include media-breakpoint-down(sm){
+	@include media-breakpoint-down(sm) {
 		height: auto;
 	}
 }
-.modal-win,.modal-map{
-	@include media-breakpoint-down(sm){
+.modal-win,
+.modal-map {
+	@include media-breakpoint-down(sm) {
 		min-height: 100vh;
 	}
 }
@@ -48,7 +49,8 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	@include media-breakpoint-down(lg){
+	color: $body-color;
+	@include media-breakpoint-down(lg) {
 		padding-top: 50px;
 	}
 	.modal-content {
@@ -85,6 +87,14 @@
 		margin-bottom: rem(20);
 		border: 1px solid #e6e6e6;
 		border-radius: 5px;
+		transition-duration: 0.4s;
+		&:focus {
+			outline: none;
+			border: 1px solid #565656;
+		}
+		&::placeholder {
+			color: #8f8f8f;
+		}
 	}
 	.form-wrap__btn {
 		font-weight: 600;
@@ -120,15 +130,15 @@ a {
 		font-size: em(36);
 	}
 }
-.modal-map{
+.modal-map {
 	width: 100%;
 	height: 100%;
 	background-color: $white;
-	&__map{
+	&__map {
 		width: 100%;
 		height: 100%;
 	}
-	&__map-widget{
+	&__map-widget {
 		width: 100%;
 		height: 100%;
 	}

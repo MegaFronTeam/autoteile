@@ -569,3 +569,12 @@ h2 {
 		display: block;
 	}
 }
+.btn-black{
+	background-color: #1E1E1E;
+	color:$white;
+	transition-duration: 0.4s;
+	opacity: 1;
+	&:hover{
+		opacity: 0.9;
+	}
+}
