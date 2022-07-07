@@ -88,9 +88,11 @@
 		border: 1px solid #e6e6e6;
 		border-radius: 5px;
 		transition-duration: 0.4s;
+		outline: none !important;
 		&:focus {
-			outline: none;
-			border: 1px solid #565656;
+			
+			// border: 1px solid #565656;
+			box-shadow: 0px 0px 0px 2px #565656 !important;
 		}
 		&::placeholder {
 			color: #8f8f8f;
