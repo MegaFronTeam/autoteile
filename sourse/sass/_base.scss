@@ -98,8 +98,8 @@ body {
 .main-wrapper {
 	// position: relative;
 	width: 100%;
-	// 
-	@include media-breakpoint-down(lg){
+	//
+	@include media-breakpoint-down(lg) {
 		overflow: hidden;
 	}
 	// display: flex;
@@ -515,7 +515,7 @@ h2 {
 }
 
 .fp-right {
-	li{
+	li {
 		margin-top: 20px !important;
 		margin-bottom: 20px !important;
 	}
@@ -537,8 +537,9 @@ h2 {
 	}
 }
 
-
-.fp-section.fp-table, .fp-slide.fp-table,  .fp-tableCell{
+.fp-section.fp-table,
+.fp-slide.fp-table,
+.fp-tableCell {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -546,35 +547,38 @@ h2 {
 	justify-content: center;
 }
 
-.ymaps-2-1-79-controls__control,.ymaps-2-1-79-map-copyrights-promo,.ymaps-2-1-79-copyright{
+.ymaps-2-1-79-controls__control,
+.ymaps-2-1-79-map-copyrights-promo,
+.ymaps-2-1-79-copyright {
 	display: none !important;
 }
-.ymaps-2-1-79-events-pane{
+.ymaps-2-1-79-events-pane {
 	background-color: #e6e6e6;
 	mix-blend-mode: color;
 }
-.fullpage-wrapper{
-	@include media-breakpoint-down(lg){
+.fullpage-wrapper {
+	@include media-breakpoint-down(lg) {
 		overflow: hidden;
 	}
 }
 
-.fp-tableCell,.section{
-	@include media-breakpoint-down(lg){
+.fp-tableCell,
+.section {
+	@include media-breakpoint-down(lg) {
 		height: auto !important;
 	}
 }
-.fp-section.fp-table{
-	@include media-breakpoint-down(lg){
+.fp-section.fp-table {
+	@include media-breakpoint-down(lg) {
 		display: block;
 	}
 }
-.btn-black{
-	background-color: #1E1E1E;
-	color:$white;
+.btn-black {
+	background-color: #1e1e1e;
+	color: $white;
 	transition-duration: 0.4s;
 	opacity: 1;
-	&:hover{
+	&:hover {
 		opacity: 0.9;
 	}
 }

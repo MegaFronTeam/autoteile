@@ -29,7 +29,7 @@ const JSCCommon = {
 				// 	fullpage_api.setAllowScrolling(false);
 				// 	// console.log(1);
 				// },
-				destroy:(fancybox, slide) => {
+				destroy: (fancybox, slide) => {
 					fullpage_api.setAllowScrolling(true);
 					console.log(2);
 				},
@@ -464,25 +464,25 @@ function eventHandler() {
 	if (document.querySelector('.menu-mobile--js')) {
 		let links = document.querySelectorAll('.menu-mobile a');
 		for (let i = 0; i < links.length; i++) {
-			links[i].addEventListener('click', () => { 
-				document.querySelector('.menu-mobile--js').classList.remove('active'); 
-				document.querySelector('.toggle-menu-mobile--js').classList.remove('on'); 
-				
+			links[i].addEventListener('click', () => {
+				document.querySelector('.menu-mobile--js').classList.remove('active');
+				document.querySelector('.toggle-menu-mobile--js').classList.remove('on');
+
 			});
 		}
 	}
-	if(document.querySelector('.modal-open-link')){
+	if (document.querySelector('.modal-open-link')) {
 		let modalOpen = document.querySelectorAll('.modal-open-link');
 		for (let i = 0; i < modalOpen.length; i++) {
-			modalOpen[i].addEventListener('click', () => { 
+			modalOpen[i].addEventListener('click', () => {
 				fullpage_api.setAllowScrolling(false);
 			});
 		}
 	}
-	if(document.querySelector('.is-close')){
+	if (document.querySelector('.is-close')) {
 		console.log(document.querySelector('.is-close'));
 	}
-	
+	document.querySelector('.sContact__map-link').onclick = init;
 	// }
 	// function setFixedNav() {
 	// 	let topNav = document.querySelector('.top-nav  ');
@@ -506,7 +506,7 @@ function eventHandler() {
 
 	whenResize();
 
-	
+
 	let defaultSl = {
 		spaceBetween: 0,
 		lazy: {
@@ -546,37 +546,37 @@ if (document.readyState !== 'loading') {
 // 		document.body.classList.remove('loaded_hiding');
 // 	}, 500);
 // }
-if (document.querySelector('.modal-map__map--js')) {
-	ymaps.ready(function () {
-		var myMap = new ymaps.Map('map', {
-			center: [55.739823, 37.783141],
-			zoom: 15,
-			controls: [`zoomControl`]
+function init() {
+	var myMap = new ymaps.Map('map', {
+		center: [55.739823, 37.783141],
+		zoom: 15,
+		controls: [`zoomControl`]
+	}, {
+		searchControlProvider: 'yandex#search'
+	}),
+
+		myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+
 		}, {
-			searchControlProvider: 'yandex#search'
-		}),
-
-			myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-
-			}, {
-				// Опции.
-				// Необходимо указать данный тип макета.
-				iconLayout: 'default#image',
-				// Своё изображение иконки метки.
-				iconImageHref: 'img/svg/map-icon.svg',
-				// Размеры метки.
-				iconImageSize: [40, 40],
-				// Смещение левого верхнего угла иконки относительно
-				// её "ножки" (точки привязки).
-				iconImageOffset: [0, -10]
-			});
-		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-			//... отключаем перетаскивание карты
-			myMap.behaviors.disable('drag');
-			myMap.zoom = 11;
-		}
-		myMap.geoObjects
-			.add(myPlacemark)
-	});
-
+			// Опции.
+			// Необходимо указать данный тип макета.
+			iconLayout: 'default#image',
+			// Своё изображение иконки метки.
+			iconImageHref: 'img/svg/map-icon.svg',
+			// Размеры метки.
+			iconImageSize: [40, 40],
+			// Смещение левого верхнего угла иконки относительно
+			// её "ножки" (точки привязки).
+			iconImageOffset: [0, -10]
+		});
+	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		//... отключаем перетаскивание карты
+		myMap.behaviors.disable('drag');
+		myMap.zoom = 11;
+	}
+	myMap.geoObjects
+		.add(myPlacemark);
 }
+// ymaps.ready(function () {
+// 	init();
+// });
