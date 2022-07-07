@@ -81,7 +81,7 @@ body {
 	}
 
 	&.fixed {
-		overflow: hidden;
+		overflow: hidden !important;
 		position: absolute;
 		width: 100%;
 		left: 0;
