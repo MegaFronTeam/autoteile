@@ -553,8 +553,8 @@ h2 {
 	display: none !important;
 }
 .ymaps-2-1-79-events-pane {
-	background-color: #e6e6e6;
-	mix-blend-mode: color;
+	// background-color: #e6e6e6;
+	// mix-blend-mode: color;
 }
 .fullpage-wrapper {
 	@include media-breakpoint-down(lg) {
@@ -582,7 +582,7 @@ h2 {
 		opacity: 0.9;
 	}
 }
-.ymaps-2-1-79-map{
+.ymaps-2-1-79-map ,.ymaps-2-1-79-events-pane{
 	width: 100vw !important;
 	height: 100vh !important;
 }
