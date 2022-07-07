@@ -87,9 +87,13 @@
 		font-weight: 600;
 		white-space: nowrap;
 		.icon {
-			font-size: rem(20);
-			margin-right: rem(5);
-			margin-top: -2px;
+			
+			@include media-breakpoint-up(lg){
+				margin-right: rem(5);
+				margin-top: -2px;
+				font-size: rem(20);
+			}
+			font-size: rem(30);
 		}
 		@include media-breakpoint-down(lg) {
 			text-align: center;

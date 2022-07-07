@@ -101,6 +101,9 @@
 		z-index: 1;
 	}
 	&__text-item {
+		@include media-breakpoint-down(sm){
+			max-width: 225px;
+		}
 		& > * {
 			&:first-child {
 				margin-bottom: rem(10);
