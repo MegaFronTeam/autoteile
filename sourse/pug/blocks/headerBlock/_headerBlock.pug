@@ -3,16 +3,16 @@ mixin headerBlock(data)
 	+b.headerBlock.section&attributes(attributes)
 		.container
 			+e.wrap
-				+e.car(data-aos="fade-up" data-aos-duration="600" data-aos-delay="0")
+				+e.car(data-aos="fade-up" data-aos-duration="300" data-aos-delay="0")
 					+e.IMG.car-bg(src="img/car-bg.png", alt="")
 					//- mixin item(num)
 					- for(let x = 1;x<7;x++)
-						+e.car-item(class=`--pos${x}` data-aos="fade-up" data-aos-duration="300" data-aos-delay=`${600 + 300*x}`)
+						+e.car-item(class=`--pos${x}` data-aos="fade-up" data-aos-duration="600" data-aos-delay=`${200 + 100*x}`)
 							img(src=`img/car-item-${x}.png`, alt="")
 						//- +item(x)
-				h1(data-aos="fade-up" data-aos-duration="600" data-aos-delay="600")!= data.title 
+				h1(data-aos="fade-up" data-aos-duration="300" data-aos-delay="300")!= data.title 
 				+e.caption.d-lg-none!= data.caption 
 				a.top-nav__order-call.modal-open-link.btn-black.d-lg-none(href="#" data-src='#modal-call' data-fancybox="modal" )!= data.order 
-			+e.caption.d-none.d-lg-block(data-aos="fade-up" data-aos-duration="600" data-aos-delay="1200")!= data.caption 
+			+e.caption.d-none.d-lg-block(data-aos="fade-up" data-aos-duration="300" data-aos-delay="200")!= data.caption 
 			
 	// end headerBlock

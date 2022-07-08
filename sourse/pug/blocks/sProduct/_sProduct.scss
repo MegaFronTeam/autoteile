@@ -80,7 +80,8 @@
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			width: 60%;
+			max-width: 60%;
+			max-height: 60%;
 		}
 		&--pos1 {
 			top: 0%;

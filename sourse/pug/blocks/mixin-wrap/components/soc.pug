@@ -6,10 +6,10 @@ mixin item-sos(icon, a='#')
 			+icon(icon)
 //- social buttons
 mixin soc()
-	+b.soc
-		+e.item--whatsapp(href="tel:+79099969698")
+	+b.soc&attributes(attributes)
+		+e.item--whatsapp(target="_blank" href=`https://wa.me/${tel.replace(/\+|\s+/g, '')}`)
 			+icon('whatsapp')
-		+e.item--telegram(href="https://t.me/Sergi_MIPT")
+		+e.item--telegram(target="_blank"  href=`https://telegram.me/${tel.replace(/\s|\+/g, '')}`)
 			+icon('telegram')
 
 //- /social buttons 

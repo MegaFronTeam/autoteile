@@ -8,9 +8,9 @@ mixin modal(data)
 				+form-wrap
 					h3 Заказать звонок
 					.modal-win__caption Заполните форму и мы свяжемся с Вами в ближайшее время для уточнения деталей
-					+input("Ваше имя")
+					+input("Ваше имя",'text','','name')
 					+input("Ваш телефон",'tel')(required)
-					+input("Ваш email")
+					+input("Ваш email",'email')
 					+e.BUTTON.btn.btn-black(type="submit" ) Отправить заявку
 					.modal-win__agree Согласен(-а) на обработку и хранение моих персональных данных в соответствии с условиями
 		// #modal-call
@@ -19,7 +19,7 @@ mixin modal(data)
 				+form-wrap
 					h3 Спасибо за обращение
 					.modal-win__caption Мы свяжемся с Вами в ближайшее время для уточнения деталей
-					+e.BUTTON.btn.btn-black(type="submit"  ) Закрыть
+					+e.BUTTON.btn.btn-black.modal-close-js(type="button") Закрыть
 		// #modal-thanks
 		div(id="modal-map" style="display: none" )
 			+b.modal-map
@@ -37,9 +37,9 @@ mixin modal(data)
 				+form-wrap
 					h3 Applicaton form
 					.modal-win__caption Fill out the form and we will contact you as soon as possible to clarify the details
-					+input("Your name")
+					+input("Your name",'text','','name')
 					+input("Your number",'tel')(required)
-					+input("Your email")
+					+input("Your email",'email')
 					+e.BUTTON.btn.btn-black(type="submit"  ) Send
 					.modal-win__agree I agree to the processing and storage of my personal data in accordance with the terms
 		// #modal-call
@@ -48,12 +48,12 @@ mixin modal(data)
 				+form-wrap
 					h3 Thank you
 					.modal-win__caption We will contact you soon to clarify the details
-					+e.BUTTON.btn.btn-black(type="submit"  ) Close
+					+e.BUTTON.btn.btn-black.modal-close-js(type="button") Close
 		// #modal-thanks
 		div(id="modal-map" style="display: none" )
 			+b.modal-map
 				+e.map--js
-					script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=6331e0a6-b922-4b24-a8f0-88e62d68142f')
+					script(src='https://api-maps.yandex.ru/2.1/?lang=en_us&apikey=6331e0a6-b922-4b24-a8f0-88e62d68142f')
 					+e.map-widget#map
 		
 		// end modals

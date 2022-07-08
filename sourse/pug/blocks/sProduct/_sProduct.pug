@@ -3,10 +3,10 @@ mixin sProduct(data)
 	+b.SECTION.sProduct.section&attributes(attributes)
 		.container
 			+e.wrap
-				+e.product(data-aos="fade-up" data-aos-duration="600" data-aos-delay="800")
+				+e.product(data-aos="fade-up" data-aos-duration="600" data-aos-delay="100")
 					+e.IMG.product-bg(src="img/product-bg.png", alt="")
 					mixin item(num)
-						+e.product-item(class=`--pos${num}` data-aos="fade-up" data-aos-duration="300" data-aos-delay=`${1200 + 300*num}`)
+						+e.product-item(class=`--pos${num}` data-aos="fade-up" data-aos-duration="300" data-aos-delay=`${200 + 50*num}`)
 							img(src=`img/product-item-${num}.png`, alt="")
 					- for(let x = 1;x<7;x++)
 						+item(x)

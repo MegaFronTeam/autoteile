@@ -99,16 +99,21 @@
 }
 
 .changeLang {
-	position: fixed;
 	z-index: 10;
-	@include media-breakpoint-down(lg) {
-		display: none;
+	display: none;
+	@include media-breakpoint-up(lg) {
+		position: fixed;
+		left: rem(3);
+		top: 50%;
+		transform: translateY(-50%) rotate(-90deg);
+		margin-bottom: 0;
+		font-size: rem(14);
 	}
-	left: rem(3);
-	top: 50%;
-	transform: translateY(-50%) rotate(-90deg);
+	margin-bottom: 2rem;
 	display: flex;
 	align-items: center;
+	justify-content: center;
+	position: relative;
 	&::after {
 		content: "";
 		position: absolute;
@@ -121,7 +126,6 @@
 	&__link {
 		color: #8f8f8f;
 		font-weight: 600;
-		font-size: rem(14);
 		line-height: calc(20 / 14);
 		&:first-child {
 			margin-right: rem(20);

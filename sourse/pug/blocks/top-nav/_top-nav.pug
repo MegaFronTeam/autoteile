@@ -31,17 +31,18 @@ mixin top-nav(orderCall)
 				+e.col-menu.col-lg.col-12.order-lg-0.order-last
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
+							+changeLang(lan.lang)
 							block
 							+e.menu-footer
-								+e.tel(href="tel:+79099969698") +7 909 996-96-98
+								+e.tel(href=`tel:${tel.replace(/\s+/g, '')}`)= tel
 								+e.menu-footer-btn-wrap
 									+e.order-call.modal-open-link.btn-black(href="#" data-src='#modal-call' data-fancybox="modal")=orderCall
 									+soc
 				+e.col.col-auto
 					+e.tel-block
-						+e.tel(href="tel:+79099969698")
+						+e.tel(href=`tel:${tel.replace(/\s+/g, '')}`)
 							+icon('phone')
-							span +7 909 996-96-98
+							span= tel
 						+e.order-call.modal-open-link.btn-black(href="#" data-src='#modal-call' data-fancybox="modal")=orderCall
 				
 	// end top-nav

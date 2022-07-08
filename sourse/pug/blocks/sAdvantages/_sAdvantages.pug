@@ -3,12 +3,12 @@ mixin sAdvantages(data)
 	+b.SECTION.sAdvantages.section.gray-bg&attributes(attributes) 
 		.container
 			+e.wrap
-				h2(data-aos="fade-up" data-aos-duration="600" data-aos-delay="200")= data.title
+				h2(data-aos="fade-up" data-aos-duration="600" data-aos-delay="100")= data.title
 				.row
 
 					each p, index in data.content
 						.col-lg-3.col-6
-							+e.item(data-aos="fade-up" data-aos-duration="200" data-aos-delay=`${600 + 200*(index+1)}`)
+							+e.item(data-aos="fade-up" data-aos-duration="600" data-aos-delay=`${100 + 100*(index+1)}`)
 								+e.pic
 									+icon(`advantages-${index + 1}`)
 								+e.text!=p

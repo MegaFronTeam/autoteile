@@ -5,12 +5,12 @@ mixin sContact(data)
 			img(src="img/svg/logo-bg.svg", alt="")
 		.container
 			+e.wrap
-				+e.map-block(data-aos="fade-up" data-aos-duration="600" data-aos-delay="800")
+				+e.map-block(data-aos="fade-up" data-aos-duration="300" data-aos-delay="400")
 					+e.IMG.map-pic(src="img/map.jpg", alt="")
 					+e.map-link.modal-open-link(href="#" data-src="#modal-map" data-fancybox="modal")
 						+icon('map')
 						span=data.map
-				+e.text-block(data-aos="fade-up" data-aos-duration="600" data-aos-delay="200")
+				+e.text-block(data-aos="fade-up" data-aos-duration="300" data-aos-delay="200")
 					h2=data.title
 					+e.text-item
 						p!=`<strong>${data.subtitle1}</strong>`
@@ -18,10 +18,10 @@ mixin sContact(data)
 					+e.text-item
 						p!=`<strong>${data.subtitle2}</strong>`
 						+e.tel-wrap
-							a(href="tel:+79099969698") +7 909 996-96-98
+							a(href=`tel:${tel.replace(/\s+/g, '')}`)= tel
 							+e.soc-wrap
-								img(src="img/svg/telegram.svg", alt="")
-								img(src="img/svg/whatsapp.svg", alt="")
+								a(href="#" target="_blank"): img(src="img/svg/telegram.svg", alt="")
+								a(href="#" target="_blank"): img(src="img/svg/whatsapp.svg", alt="")
 					+e.text-item
 						p!=`<strong>${data.subtitle3}</strong>`
 						a(href="mailto:sales@sutoteile-import.ru") sales@sutoteile-import.ru

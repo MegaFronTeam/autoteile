@@ -1,6 +1,39 @@
 "use strict";
 const $ = jQuery;
 
+
+function init() {
+	var myMap = new ymaps.Map('map', {
+		center: [55.739823, 37.783141],
+		zoom: 15,
+		controls: [`zoomControl`]
+	}, {
+		searchControlProvider: 'yandex#search'
+	}),
+
+		myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+
+		}, {
+			// Опции.
+			// Необходимо указать данный тип макета.
+			iconLayout: 'default#image',
+			// Своё изображение иконки метки.
+			iconImageHref: 'img/svg/map-icon.svg',
+			// Размеры метки.
+			iconImageSize: [40, 40],
+			// Смещение левого верхнего угла иконки относительно
+			// её "ножки" (точки привязки).
+			iconImageOffset: [0, -10]
+		});
+	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		//... отключаем перетаскивание карты
+		myMap.behaviors.disable('drag');
+		myMap.zoom = 11;
+	}
+	myMap.geoObjects
+		.add(myPlacemark);
+}
+
 const JSCCommon = {
 	modalCall() {
 		const link = '[data-fancybox="modal"], .link-modal-js';
@@ -38,6 +71,7 @@ const JSCCommon = {
 		document.querySelectorAll(".modal-close-js").forEach(el => {
 			el.addEventListener("click", () => {
 				Fancybox.close();
+				fullpage_api.setAllowScrolling(true);
 			})
 		})
 		Fancybox.bind('[data-fancybox]', {
@@ -201,7 +235,7 @@ const JSCCommon = {
 				data: data,
 			}).done(function (data) {
 
-				Fancybox.close();
+				fullpage_api.setAllowScrolling(false);
 				Fancybox.show([{ src: "#modal-thanks", type: "inline" }]);
 				// window.location.replace("/thanks.html");
 				setTimeout(function () {
@@ -302,7 +336,7 @@ function eventHandler() {
 	// JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
-	// JSCCommon.sendForm();
+	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.makeDDGroup();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
@@ -447,6 +481,8 @@ function eventHandler() {
 			// wow.init();
 			AOS.init({
 				disable: 'mobile',
+				offset: 60,
+				duration: 250,
 			});
 
 
@@ -479,9 +515,9 @@ function eventHandler() {
 			});
 		}
 	}
-	if (document.querySelector('.is-close')) {
-		console.log(document.querySelector('.is-close'));
-	}
+	// if (document.querySelector('.is-close')) {
+	// 	console.log(document.querySelector('.is-close'));
+	// }
 	document.querySelector('.sContact__map-link').onclick = init;
 	// }
 	// function setFixedNav() {
@@ -546,37 +582,7 @@ if (document.readyState !== 'loading') {
 // 		document.body.classList.remove('loaded_hiding');
 // 	}, 500);
 // }
-function init() {
-	var myMap = new ymaps.Map('map', {
-		center: [55.739823, 37.783141],
-		zoom: 15,
-		controls: [`zoomControl`]
-	}, {
-		searchControlProvider: 'yandex#search'
-	}),
 
-		myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-
-		}, {
-			// Опции.
-			// Необходимо указать данный тип макета.
-			iconLayout: 'default#image',
-			// Своё изображение иконки метки.
-			iconImageHref: 'img/svg/map-icon.svg',
-			// Размеры метки.
-			iconImageSize: [40, 40],
-			// Смещение левого верхнего угла иконки относительно
-			// её "ножки" (точки привязки).
-			iconImageOffset: [0, -10]
-		});
-	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-		//... отключаем перетаскивание карты
-		myMap.behaviors.disable('drag');
-		myMap.zoom = 11;
-	}
-	myMap.geoObjects
-		.add(myPlacemark);
-}
 // ymaps.ready(function () {
 // 	init();
 // });

@@ -546,7 +546,10 @@ h2 {
 	width: 100%;
 	justify-content: center;
 }
-
+.fp-tableCell{
+	flex-grow: 1;
+	height: auto !important;
+}
 .ymaps-2-1-79-controls__control,
 .ymaps-2-1-79-map-copyrights-promo,
 .ymaps-2-1-79-copyright {
