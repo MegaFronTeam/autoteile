@@ -127,4 +127,28 @@
 	}
 	@include media-breakpoint-up(lg) {
 	}
+	&__btn{
+		@extend .btn, .btn-black;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 297px;
+		margin-top: rem(40);
+		width: 100%;
+		border-radius: 60px;
+		font-size: 14px;
+		font-weight: 600;
+		background-color: #fff;
+		color: #1e1e1e;
+		&:hover{
+			
+			background-color:  #1e1e1e;
+			color:#fff;
+		}
+		border: 1px solid #1e1e1e;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: rem(60);
+	}
 } // end.sProduct

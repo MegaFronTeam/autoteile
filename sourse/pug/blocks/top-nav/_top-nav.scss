@@ -116,8 +116,13 @@
 		font-weight: 600;
 		font-size: rem(14);
 		padding-top: rem(10);
-		padding-left: rem(30);
-		padding-right: rem(30);
+		@include media-breakpoint-up(xxl) {
+
+			padding-left: rem(30);
+			padding-right: rem(30);
+		}
+		padding-left: rem(15);
+		padding-right: rem(15);
 		padding-bottom: rem(10);
 		white-space: nowrap;
 		@include media-breakpoint-down(lg) {
@@ -165,6 +170,11 @@
 
 	@include media-breakpoint-up(xs) {
 	}
+	@include media-breakpoint-down(xl) {
+		&__order-call{
+			display: none;
+		}
+	}	
 
 	//
 }

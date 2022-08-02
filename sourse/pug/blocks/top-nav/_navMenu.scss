@@ -44,7 +44,32 @@
 			--line: #{$body-color};
 		}
 	}
-	a {
+	.btn{
+		border-radius: 60px;
+		line-height: calc(20 / 14);
+		font-weight: 600;
+		font-size: rem(14);
+		padding-top: rem(10);
+		@include media-breakpoint-up(xxl) {
+
+			padding-left: rem(30);
+			padding-right: rem(30);
+		}
+		padding-left: rem(15);
+		padding-right: rem(15);
+		padding-bottom: rem(10);
+		white-space: nowrap;
+		@include media-breakpoint-down(lg) {
+			font-size: rem(15);
+			line-height: calc(20 / 14);
+			padding-top: rem(10.7);
+			padding-bottom: rem(10.7);
+			padding-left: rem(36.4);
+			padding-right: rem(36.4);
+		}
+
+	}
+	a:not(.btn) {
 		display: block;
 		position: relative;
 		color: $body-color !important;

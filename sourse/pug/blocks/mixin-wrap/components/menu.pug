@@ -9,6 +9,8 @@ mixin mnu(menu)
 		each link,key in menu
 			li.menu-item(class= navLinks[key].class  data-menuanchor=navLinks[key].url)
 				a(href=`#${navLinks[key].url}`)= link.name
+		li.menu-item
+			a(href=`#`).btn.btn-danger Купить
 
 
 //- menu
