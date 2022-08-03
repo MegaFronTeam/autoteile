@@ -1,10 +1,13 @@
 .menu {
+		@media (min-width: 1680px){
+
+			justify-content: center;
+		}
 	@include media-breakpoint-up(lg) {
 		
 		text-align: center;
 		// @include roww(20px);
 		flex-wrap: wrap;
-		justify-content: center;
 		align-items: center;
 	}
 	display: flex;
@@ -21,8 +24,8 @@
 		// margin-left: 0;
 		// margin-right: 0;
 		@include media-breakpoint-up(xxl){
-			padding-left: rem(20);
-			padding-right: rem(20);
+			padding-left: rem(14);
+			padding-right: rem(14);
 		}
 		@include media-breakpoint-up(lg) {
 			padding-left: 1.04vw;
@@ -195,7 +198,7 @@
 			// padding: rem(20) 0;
 			overflow-x: hidden;
 			overflow-y: auto;
-			-webkit-overflow-scrolling: touch;
+			// -webkit-overflow-scrolling: touch;
 			height: 100%;
 			@include mt(0.3s);
 			transition-delay: 0.4s;
@@ -203,7 +206,7 @@
 			@include media-breakpoint-down(lg){
 				display: flex;
 				flex-direction: column;
-				padding-top: 21.25vh;
+				padding-top: 12.25vh;
 				padding-bottom: rem(40);
 				padding-left: 25px;
 				padding-right: 25px;

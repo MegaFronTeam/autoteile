@@ -16,9 +16,13 @@
 	padding-top: rem(32);
 	padding-bottom: rem(32);
 	&__logo-block {
+		@media (min-width: 1680px){
+			width: rem(385);
+			margin-right: 0;
+		}
 		@include media-breakpoint-up(xxl) {
 			// width: rem(385);
-			width: rem(385);
+			margin-right: 30px;
 		}
 		width: auto;
 		@include media-breakpoint-down(lg) {
