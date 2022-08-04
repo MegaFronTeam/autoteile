@@ -1,9 +1,9 @@
 .menu {
 		@media (min-width: 1680px){
 
-			justify-content: center;
 		}
-	@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(lg) {
+		justify-content: center;
 		
 		text-align: center;
 		// @include roww(20px);
@@ -28,8 +28,8 @@
 			padding-right: rem(14);
 		}
 		@include media-breakpoint-up(lg) {
-			padding-left: 1.04vw;
-			padding-right: 1.04vw;
+			padding-left: .6vw;
+			padding-right: .6vw;
 		}
 		@include media-breakpoint-down(lg){
 			margin-bottom: 31px;
@@ -207,9 +207,9 @@
 				display: flex;
 				flex-direction: column;
 				padding-top: 12.25vh;
-				padding-bottom: rem(40);
 				padding-left: 25px;
 				padding-right: 25px;
+				padding-bottom: rem(240);
 			}
 			@include media-breakpoint-down(sm){
 				// padding-top: rem(170);
